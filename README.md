@@ -21,7 +21,9 @@ Stellen Sie sicher, dass Sie in den Einstellungen des Moduls unter dem Reiter 'M
 Öffnen Sie den Beitrag, in den Sie das Modul einfügen wollen, im Editor. Unterhalb des Editors sollte der Button '+Modul' angezeigt werden. Klicken Sie auf den Button und wählen Sie das Modul 'Evangelische Termine Liste' aus.
 ### Mir gefällt die grüne Farbe nicht. Wie kann ich das Farbschema ändern?
 Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Reiter 'Layout' finden Sie das Textfeld 'Custom-CSS'. Hier können Sie einzelne oder alle Formate der mitgelieferten CSS-Datei https://github.com/herrpfarrer/Evangelische-Termine-Liste/blob/main/media/css/etliste.css überschreiben. Wenn Sie nur die Farben ändern wollen, kopieren Sie diesen Code in das Textfeld 'Custom-CSS' und passen Sie die jeweiligen Farben Ihren Wünschen an:
-``#etliste_filter_container button{
+
+```
+#etliste_filter_container button{
 	background-color:rgba(180,222,154,1);
 	border-color:rgba(180,222,154,1);
 	color:white;
@@ -176,4 +178,5 @@ Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Re
     border-color:#b4de9a;
     background:#b4de9a;
     color:#ffffff;
-}``
+}
+```
