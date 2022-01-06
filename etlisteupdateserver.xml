@@ -14,6 +14,7 @@
 		</tags>
 		<maintainer>Daniel Städtler</maintainer>
 		<maintainerurl>https://github.com/herrpfarrer/</maintainerurl>
+        <section>Updates</section>
 		<targetplatform name="joomla" version="3" />
     </update>
 </updates>
