@@ -4,6 +4,7 @@
 		<description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.</description>
 		<element>mod_etliste</element>
 		<type>module</type>
+        <client>site</client>
 		<version>2.0</version>
 		<infourl title="Joomla!">https://github.com/herrpfarrer/Evangelische-Termine-Liste</infourl>
 		<downloads>
@@ -15,5 +16,6 @@
 		<maintainer>Daniel Städtler</maintainer>
 		<maintainerurl>https://github.com/herrpfarrer/</maintainerurl>
         <section>Updates</section>
+        <targetplatform name="joomla" version="3" />
     </update>
 </updates>
