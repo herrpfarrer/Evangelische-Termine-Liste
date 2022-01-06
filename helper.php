@@ -174,52 +174,42 @@ class modETListeHelper
 			$veranstalterIDIMP = filter_var($_GET['vidIMP'], FILTER_SANITIZE_STRING);
 			if ($veranstalterIDIMP != ''){
 				$veranstalterID = $veranstalterIDIMP;
-				//$reset = true;
 			}		
 			$regionIMP = filter_var($_GET['regionIMP'], FILTER_SANITIZE_STRING);
 			if ($regionIMP  != ''){
 				$region = $regionIMP;
-				//$reset = true;
 			}		
 			$itemsPerPageIMP = filter_var($_GET['itemsPerPageIMP'], FILTER_SANITIZE_STRING);
 			if ($itemsPerPageIMP  != ''){
 				$itemsPerPage = $itemsPerPageIMP;
-				//$reset = true;
 			}
 			$highlightIMP = filter_var($_GET['highlightIMP'], FILTER_SANITIZE_STRING);
 			if ($highlightIMP  != ''){
 				$highlight = $highlightIMP;
-				//$reset = true;
 			}
 			$eventtypeIMP = filter_var($_GET['eventtypeIMP'], FILTER_SANITIZE_STRING);
 			if ($eventtypeIMP != ''){
 				$eventtype = $eventtypeIMP;
-				//$reset = true;
 			}			
 			$placeIMP = filter_var($_GET['placeIMP'], FILTER_SANITIZE_STRING);
 			if ($placeIMP != ''){
 				$place = $placeIMP;
-				//$reset = true;
 			}	
 			$peopleIMP = filter_var($_GET['peopleIMP'], FILTER_SANITIZE_STRING);
 			if ($peopleIMP != ''){
 				$people = $peopleIMP;
-				//$reset = true;
 			}
 			$personIMP = filter_var($_GET['personIMP'], FILTER_SANITIZE_STRING);
 			if ($personIMP != ''){
 				$person = $personIMP;
-				//$reset = true;
 			}
 			$ipmIMP = filter_var($_GET['ipmIMP'], FILTER_SANITIZE_STRING);
 			if ($ipmIMP != ''){
 				$ipm = $ipmIMP;
-				//$reset = true;
 			}
 			$chaIMP = filter_var($_GET['chaIMP'], FILTER_SANITIZE_STRING);
 			if ($chaIMP != ''){
 				$cha = $chaIMP;
-				//$reset = true;
 			}
 		}
 
