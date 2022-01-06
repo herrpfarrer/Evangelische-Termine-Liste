@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    
+	<name>Evangelische Termine Liste</name>
+    <author>Daniel Städtler</author>
+    <version>1.0.0</version>
+    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.</description>
+	
+    <files>
+        <filename>mod_etliste.xml</filename>
+        <filename module="mod_etliste">mod_etliste.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    
+	<media folder="media" destination="mod_etliste">
+		<folder>css</folder>
+	</media>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					type="spacer"
+					name="spacedetail"
+					class="text"
+					label="&lt;h3&gt;Wählen Sie Ihre Termine aus&lt;/h3&gt;"
+				/>
+				<field
+					name="veranstalterid"
+					type="text"
+					label="Veranstalter-ID"
+					description="Geben Sie hier Ihre Veranstalter-ID von www.evangelische-termine.de ein. Mehrere Ids können durch Komma getrennt angegeben werden. Für die Dekanatsausgabe geben Sie als Veranstalter-ID 'all' ein."
+					default="2220"
+					required="true"
+					/>
+				<field
+					name="dekanatsnummer"
+					type="text"
+					label="Dekanats-Nummer"
+					description="Für die Dekanatsausgabe geben Sie hier Ihre 3-stellige Dekanatsnummer ein. Denken Sie daran, als Veranstalter-ID 'all' einzugeben. Mehrere Dekanatsnummern können durch Kommata getrennt angegeben werden."
+					default=""
+				/>
+				<field
+					name="itemsperpage"
+					type="text"
+					label="Anzahl"
+					description="Wie viele Veranstaltungen sollen pro Seite angezeigt werden?"
+					default="20"
+					required="true"
+				/>
+				<field
+					name="highlights"
+					type="radio"
+					label="Nur Highlights?"
+					description="Sollen nur Highlights oder alle Veranstaltungen angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="all">Alles</option>
+					<option value="high">Nur Highlights</option>
+				</field>
+				<field
+					name="eventtype"
+					type="textarea"
+					label="Kategorie"
+					description="Legen Sie fest, welche Kategorien berücksichtigt werden sollen:
+								&lt;br /&gt;all => alle 
+								&lt;br /&gt;1 => Gottesdienste
+								&lt;br /&gt;2 => Gruppen / Kreise
+								&lt;br /&gt;3 => Fortbildungen / Seminare / Vorträge
+								&lt;br /&gt;4 => Konzerte / Theater / Musik
+								&lt;br /&gt;5 => Freizeiten / Reisen
+								&lt;br /&gt;6 => Ausstellungen / Kunst
+								&lt;br /&gt;7 => Feste / Feiern
+								&lt;br /&gt;8 => Sport/Spiel
+								&lt;br /&gt;9 => Sonstiges
+								&lt;br /&gt;10 => Meditation / spirituelle Angebote
+								&lt;br /&gt;Ein vorangestelltes '-' negiert die Auswahl, z.B. -1 => alles außer Gottesdienste. 
+								&lt;br /&gt;Mehrere Kategorien können durch Komma getrennt angegeben werden (=ODER Verknüpfung).
+								&lt;br /&gt;Mehrere Kategorien können durch Punkt getrennt angegeben werden (= UND Verknüpfung)."
+					rows="3"
+					default="all"
+					required="true"
+				/>
+				<field
+					name="people"
+					type="textarea"
+					label="Zielgruppe"
+					description="Legen Sie fest, welche Zielgruppen berücksichtigt werden sollen:
+								&lt;br /&gt;0 => Alle
+								&lt;br /&gt;5 => Kinder
+								&lt;br /&gt;40 => Konfirmanden
+								&lt;br /&gt;10 => Jugendliche
+								&lt;br /&gt;15 => Junge Erwachsene
+								&lt;br /&gt;16 => Frauen
+								&lt;br /&gt;17 => Männer
+								&lt;br /&gt;20 => Familien
+								&lt;br /&gt;25 => Erwachsene
+								&lt;br /&gt;30 => Senioren
+								&lt;br /&gt;35 => besondere Zielgruppe
+								&lt;br /&gt;Mehrere Zielgruppen können durch Komma getrennt angegeben werden."
+					rows="3"
+					default="all"
+					required="true"
+				/>
+				<field
+					name="place"
+					type="text"
+					label="Veranstaltungsort"
+					description="ID des Veranstaltungsortes. Mehrere Veranstaltungsorte können durch Komma getrennt angegeben werden. 'all' für alle Veranstaltungsorte eingeben."
+					default="all"
+					required="true"
+				/>
+				<field
+					name="person"
+					type="text"
+					label="Ansprechpartner"
+					description="ID des Ansprechpartners. Mehrere Ansprechpartner können durch Komma getrennt angegeben werden. 'all' für alle Ansprechpartner eingeben."
+					default="all"
+					required="true"
+				/>
+				<field
+					name="ipm"
+					type="text"
+					label="Veranstaltungstyp"
+					description="ID des Veranstaltungstyps. Mehrere Veranstaltungstypen können mit Komma getrennt angegeben werden. 'all' für alle Veranstaltungstypen eingeben."
+					default="all"
+					required="true"
+				/>
+				<field
+					name="cha"
+					type="text"
+					label="Kanal"
+					description="ID des Kanals. Mehrere Kanäle können mit Komma getrennt angegeben werden. 'all' für alle Kanäle eingeben."
+					default="all"
+					required="true"
+				/>
+			</fieldset>
+			<fieldset name="layout" label="Layout">
+				<field
+					type="spacer"
+					name="spaceallgemein"
+					class="text"
+					label="&lt;h3&gt;Allgemeine Einstellungen&lt;/h3&gt;"
+				/>
+				<field
+					name="headlinetag"
+					type="list"
+					label="HTML-Tag der Überschrift"
+					description="Welches HTML-Tag soll die Überschrift erhalten? Achtung: Sie formatieren die Überschrift innerhalb des Moduls (z.B. 'Veranstaltungen' oder 'Gottesdienst am Altjahresabend'), nicht die Überschrift des Moduls (siehe dazu im Registertab 'Erweitert' die Einstellung 'Header-Tag')."
+					required="true"
+					>
+					<option value="">Bitte auswählen</option>
+					<option value="h1">h1</option>
+					<option value="h2">h2</option>
+					<option value="h3">h3</option>
+					<option value="h4">h4</option>
+					<option value="h5">h5</option>
+					<option value="h6">h6</option>
+					<option value="div">div</option>
+					<option value="span">span</option>
+				</field>
+				<field
+					name="customstyle"
+					type="textarea"
+					label="Custom-CSS"
+					description="Passen Sie das aussehen des Moduls mit Hilfe von individuellem CSS-Code an."
+					rows="15"
+				/>
+				<field
+					type="spacer"
+					name="spaceliste"
+					class="text"
+					label="&lt;h3&gt;Einstellungen der Übersichtsseite/Liste&lt;/h3&gt;"
+				/>
+				<field
+					name="showhighlight"
+					type="radio"
+					label="Zeige Highlights?"
+					description="Soll die Eingabe- bzw. Filtermethode 'Highlights' angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showeventtype"
+					type="radio"
+					label="Zeige Kategorien?"
+					description="Soll die Eingabe- bzw. Filtermethode 'Kategorien' angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showpeople"
+					type="radio"
+					label="Zeige Zielgruppen?"
+					description="Soll die Eingabe- bzw. Filtermethode 'Zielgruppen' angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showsearch"
+					type="radio"
+					label="Zeige Suche?"
+					description="Soll ein Suchfeld angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showdate"
+					type="radio"
+					label="Zeige Datumsauswahl?"
+					description="Soll Kalenderfeld angezeigt werden, mit dem ein Datum ausgewählt werden kann?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showipp"
+					type="radio"
+					label="Zeige Auswahl 'Ergebnisse pro Seite'?"
+					description="Soll ein Feld angezeigt werden, mit dem ausgewählt werden kann, wie viele Termine/Suchergebnisse pro Seite angezeigt werden sollen?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					type="spacer"
+					name="spacedetail"
+					class="text"
+					label="&lt;h3&gt;Einstellungen der Detailseite&lt;/h3&gt;"
+				/>
+				<field
+					name="replaceheader"
+					type="radio"
+					label="Überschrift in Detailansicht ersetzen?"
+					description="Soll die Überschrift in der Detailansicht durch eine Überschrift ohne Spaltenformat ersetzt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anpassen</option>
+					<option value="false">Nein</option>
+				</field>
+				<field
+					name="usecloak"
+					type="radio"
+					label="E-Mail-Adresse verschleiern?"
+					description="Joomla verschleiert standardmäßig E-Mail-Adressen. Dadurch wird der Output von Evangelische Termine korrumpiert und die Seite nicht richtig angezeigt. Um das zu verhindern, ersetzt dieses Modul standardmäßig die korrumpierte E-Mail-Adresse im betroffenen JSON-LD-Feld durch einen leeren String. Wenn Sie die E-Mail-Adresse stattdessen behalten wollen, muss das Verschleiern der Adresse auf der betroffenen Seite deaktiviert werden."
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, verschleiern und&lt;br /&gt;leeren String&lt;br /&gt;verwenden.</option>
+					<option value="false">Nein, Verschleiern&lt;br /&gt;deaktivieren</option>
+				</field>
+				<field
+					name="showback"
+					type="radio"
+					label="Zeige Button 'Zurück'?"
+					description="Soll ein Button eingeblendet werden, mit dem man zurück zur Terminübersicht gelangt? Der Button entspricht dem Klick auf den 'Zurück'-Button im Browser."
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showical"
+					type="radio"
+					label="Zeige 'In eigenen Kalender übernehmen'?"
+					description="Soll ein Icon für den Download einer Kalenderdatei im ical-Format angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showmail"
+					type="radio"
+					label="Zeige 'Per E-Mail einladen'?"
+					description="Soll ein Icon angezeigt werden, das zu einer Seite führt, von der aus der Termin via E-Mail an andere mitgeteilt werden kann?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showfb"
+					type="radio"
+					label="Zeige 'Auf Facebook teilen'?"
+					description="Soll ein Icon angezeigt werden, das zu Facebook führt, wo die Veranstaltung geteilt werden kann?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showtw"
+					type="radio"
+					label="Zeige 'Auf Twitter teilen'?"
+					description="Soll ein Icon angezeigt werden, das zu Twitter führt, wo die Veranstaltung geteilt werden kann?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showcopy"
+					type="radio"
+					label="Zeige 'In Zwischenablage kopieren'?"
+					description="Soll ein Icon angezeigt werden, das die URL der Veranstaltung per Klick in die Zwischenablage kopiert?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
+					name="showprint"
+					type="radio"
+					label="Zeige 'Seite Drucken'?"
+					description="Soll ein Icon angezeigt werden, mit dem per Klick die Funktion 'Seite Drucken' aufgerufen werden kann?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen.</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="encoding"
+					type="list"
+					label="Zeichenkodierung"
+					description="Passen Sie die Zeichenkodierung des Moduls der Zeichenkodierung Ihrer Webseite an. Unterstützt werden 'latin-1 (ISO 8859-1)' und 'utf8'."
+					required="true"
+					>
+					<option value="">Bitte auswählen</option>
+					<option value="latin-1">latin-1</option>
+					<option value="utf8">utf8</option>
+				</field>
+				<field
+					name="bettercopyURL"
+					type="list"
+					label="Moderne Funktion 'In Zwischenablage kopieren'"
+					description="Der von Evangelische Termine verwendete JavaScript-Code der Funktion 'In Zwischenablage kopieren' ist veraltet. Soll stattdessen eine moderne Alternative benutzt werden? (Es sollte nur 'nein' ausgewählt werden, wenn die moderne Alternative nicht funktionieren sollte.)"
+					required="true"
+					>
+					<option value="">Bitte auswählen</option>
+					<option value="true">Ja, moderne Alternative</option>
+					<option value="falsce">Nein, alter Code</option>
+				</field>
+				<field
+					name="fa"
+					type="textarea"
+					label="Font-Awesome"
+					description="alls Sie Font-Awesome nicht installiert haben, geben Sie einen Pfad zur Datei 'font-awesome.css' oder 'font-awesome.min.css' auf einem anderen Server an (z.B. 'https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css')."
+				/>
+				<field
+					name="urlparam"
+					type="radio"
+					label="URL-Parameter?"
+					description="Sollen die in den Moduleinstellungen angegebenen Parameter durch URL-Parameterüberschrieben werden können?
+								&lt;br /&gt;Falls Sie ja auswählen, stehen Ihnen folgende URL-Parameter zur Verfügung: 
+								&lt;br /&gt;vidIMP => überschreibt die Veranstalter-ID (z.B. '&amp;vidIMP=25')
+								&lt;br /&gt;regionIMP => überschreibt die Dekanats-Nummer (z.B. '&amp;regionIMP='201')
+								&lt;br /&gt;itemsPerPageIMP => überschreibt die Angaben für angezeigte Veranstaltungen pro Seite (z.B. '&amp;itemsPerPageIMP=10').
+								&lt;br /&gt;highlightIMP => überschreibt die Angaben für Higlights (z.B. '&amp;highlightIMP=high')
+								&lt;br /&gt;eventtypeIMP => überschreibt die Katergorie (z.B. '&amp;eventtypeIMP=-1')
+								&lt;br /&gt;placeIMP => überschreibt die Angaben für Veranstaltungsorte (z.B. '&amp;placeIMP=45,32')
+								&lt;br /&gt;peopleIMP => überschreibt die Angaben für Zielgruppen  (z.B. '&amp;peopleIMP=25')
+								&lt;br /&gt;personIMP => überschreibt die Angaben für Ansprechpartnr (z.B. '&amp;personIMP=568'))
+								&lt;br /&gt;ipmIMP => überschreibt die Angaben für Veranstaltungstypen (z.B. '&amp;ipmIMP=60')
+								&lt;br /&gt;chaIMP => überschreibt die Angaben für Kanäle (z.B. '&amp;chaIMP=2')
+								&lt;br /&gt;Bitte beachten Sie, dass Sie zusätzlich den Parameter '&amp;override=true' anhängen müssen!
+								&lt;br /&gt;Ihre URL könnte so aussehen: '&amp;eventtypeIMP=1&amp;placeIMP=13&amp;itemsPerPageIMP=5&amp;override=true'"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, URL-Parameter&lt;br /&gt; zulassen</option>
+					<option value="false">Nein, nicht zulassen</option>
+				</field>
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+			</fieldset>
+		</fields>
+    </config>
+</extension>

@@ -1,0 +1,432 @@
+#etliste_headline{}
+ 
+ 
+#etliste_filter_container {
+	width:100%;
+  }
+  
+#etliste_filter_container button{
+	background-color:rgba(180,222,154,1);
+	border-style:solid;
+	border-width: 2px;
+	border-color:rgba(180,222,154,1);
+	color: white;
+	font-variant: small-caps;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-weight: bolder;
+	padding: 2px 10px;
+  box-shadow: none;
+	}
+	
+#etliste_content_container_wrapper{}
+
+#etliste_filter_container  button:hover{
+	background-color:rgba(240,255,230,1);
+	color:rgba(180,222,154,1);}
+
+#etliste_content_container a:hover {
+	text-decoration:none;
+  }
+ 
+.warning {
+	color:red;
+	font-weight:bold;
+  }
+
+.etliste_link {
+  }
+
+a.etliste_link:hover{}
+
+.etliste_filter_headline {
+	background: #E6FFD7;
+	background: -moz-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #E6FFD7), color-stop(100%, #B4DE9A));
+	background: -webkit-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+	background: -o-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+	background: -ms-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+	background: linear-gradient(to right, #E6FFD7 0%, #B4DE9A 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6FFD7', endColorstr='#B4DE9A',GradientType=1 );
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight:bold;
+}
+
+.etliste_filter_main {
+	background-color: rgb(240, 255, 230);
+}
+
+.etliste_filter_block div,
+.etliste_filter_block_left div,
+.etliste_filter_block_right div {
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+	background:rgba(240,255,230,1);
+  }
+
+.etliste_filter_row_left:first-of-type{
+	padding-top:10px;
+	padding-bottom: 5px;
+}
+
+.etliste_filter_row_right:first-of-type{
+	padding-top:10px;
+	padding-bottom: 5px;
+}
+
+.etliste_filter_row_right #itemsPerPage{
+	width:auto;
+}
+
+.etliste_submit {
+	width:200px;
+	margin:15px 10px;
+  }
+
+.etliste_reset {
+	width:200px;
+	margin:15px 10px;
+  }
+
+#etliste_filter_container input[type=text] {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border:1px solid #666;
+	padding:1px;
+  }
+  
+.etliste_filter_subrow {
+	text-align:center;
+	background:rgba(240,255,230,1);
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#ETFilter_highlight,
+#ETFilter_eventtype,
+#ETFilter_people,
+#highlight, #eventtype, #people {
+	width:240px;	
+  }
+
+.etliste_pager_container {
+	padding:4px 0;
+}
+
+.etliste_pager {}
+
+.etliste_content_row {
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  }
+
+.etliste_content_row.even { }
+
+.etliste_content_row.odd {
+  background:rgba(240,255,230,1);
+  }
+    
+.etliste_tag {
+	font-weight:bold;
+	line-height:1.35rem;
+}
+
+.etliste_uhrzeit {}
+
+.etliste_content_title a.etliste_link_title {
+	font-weight:bold;
+	color:#333;
+	line-height:1.35rem;
+  }
+
+.etliste_content_title a.etliste_link_title:hover {
+	color:#000;
+  }
+  
+.etliste_litname{
+	font-size:0.8rem;
+	line-height:1rem;
+    display: inline-block;
+	text-align:left;
+}
+
+.etliste_description {
+  }
+
+.etliste_city {
+	display:none;
+  }
+
+.etliste_placename {
+  }
+  
+.etliste_placename:before {
+  content: "Ort: ";
+  }  
+  
+.etliste_personname {
+  display:none;
+  }
+  
+.etliste_personname:before {
+	content: " - ";
+  }
+
+.etliste_content_user {
+	display:block;
+	color:#666;
+	line-height:11px;
+	padding:2px 0;
+  }
+  
+.etliste_gottesdienste,
+.etliste_gottesdienste a.etliste_link_title,
+.etliste_gottesdienste a.etliste_link_title:hover {
+  color:rgba(201,2,29,1);
+  }
+
+.etliste_monthbar {
+  background: #E6FFD7;
+  background: -moz-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #E6FFD7), color-stop(100%, #B4DE9A));
+  background: -webkit-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+  background: -o-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+  background: -ms-linear-gradient(left, #E6FFD7 0%, #B4DE9A 100%);
+  background: linear-gradient(to right, #E6FFD7 0%, #B4DE9A 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6FFD7', endColorstr='#B4DE9A',GradientType=1 );
+  margin-top:15px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+  }
+
+/* Detailseite: */
+#etliste_detail_header {
+	padding:3px;
+	background-position:right;
+	background-repeat:no-repeat;
+	background-size:1px;
+  }
+
+#etliste_detail_title {
+	font-size:16px;
+	font-weight:bold;
+	margin:14px 0 8px 2px;
+  }
+
+#etliste_detail_date {
+	font-size:13px;
+	font-weight:bold;
+	margin:6px 0 10px 2px;
+  }
+
+#etfunc_ical, #etfunc_email, #etfunc_fb, #etfunc_tw, #etfunc_copy, #etfunc_print{
+	font-size:1.5rem;
+	margin-right:1rem;
+}
+
+.etliste_content_detaillabel {
+	font-weight:bold;
+	color:#555;
+  }
+
+#etliste_container #etliste_place_image,
+#etliste_container #etliste_place_image_th {
+	width:auto;
+  }
+
+#etliste_place_image {
+	/* Das große Bild wird erst beim Mouseover eingeblendet */
+	display:none;
+  }
+
+.etliste_user {
+	border-top:1px dotted #999;
+  }
+
+.etliste_sharefunctions {}
+#etliste_container .etliste_sharefunctions img {
+	width:auto;
+  }
+
+.etliste_detail_backlink a {
+	padding:2px 4px 2px 25px;
+	text-decoration:none;
+	background-image:url(/bundles/vket/images/backlinkbg.png );
+	background-repeat:no-repeat;
+  }
+
+/*  Footer */
+#footer {
+	text-align:center;
+	font-size:10px;
+	color:#999;
+	padding-top:10px;
+  }
+
+#footer a {
+	color:#999;
+  }
+
+@media all and (min-width: 520px) {
+ 	/* responsive */
+	.etliste_filter_main:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+  .etliste_filter_block_left {
+		-moz-box-sizing: border-box;
+		float: left;
+		margin-left: 0;
+		margin-right: -50%;
+		width:50%;
+	}
+
+  .etliste_filter_block_right {
+		-moz-box-sizing: border-box;
+		float: left;
+		margin-left: 50%;
+		margin-right: -100%;
+		width:50%;
+	}
+	
+  .etliste_content_row:after
+	 {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.etliste_content_date,
+	.etliste_content_detaillabel,
+	.etliste_detail_backlink {
+		-moz-box-sizing: border-box;
+		float: left;
+		margin-left: 0;
+		margin-right: -30%;
+		width:25%;
+		padding:2px 0 0 2px;
+	}
+
+  .etliste_content_title,
+  .etliste_content_detailvalue,
+  .etliste_sharefunctions {
+		-moz-box-sizing: border-box;
+		float: left;
+		margin-left: 30%;
+		margin-right: -100%;
+		width:70%;
+		padding:2px 0 0 7px;
+	}
+	
+  #etliste_detail_header {
+		background-size:contain;	
+	}
+}
+
+
+
+ /**
+	=================
+	Simple Pagination
+	=================
+	* CSS themes for simplePagination.js
+	* Author: Flavius Matis - http://flaviusmatis.github.com/
+	* URL: https://github.com/flaviusmatis/simplePagination.js	
+	
+	Evangelische Termine benutzt serverseitig das jQuery Plugin Simple Pagination. Der nachfolgende CSS-Code gehört zum Plugin und ist hier integriert, um den Output von Evangelische Termine zu formatieren.
+**/
+
+
+ul.simple-pagination {
+	/* list-style: none; */
+  }
+
+.etliste_simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	margin: 0; 
+  }
+
+.etliste_simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+
+.etliste_simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+  }
+
+.etliste_light-theme a, .etliste_light-theme span {
+	float:left;
+	color: #666;
+	font-size:14px;
+	line-height:24px;
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #BBB;
+	min-width: 14px;
+	padding: 0 7px;
+	margin: 0 5px 0 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background: #efefef; 
+	background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); 
+	background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%); 
+	background: -o-linear-gradient(top, #ffffff 0%,#efefef 100%); 
+	background: -ms-linear-gradient(top, #ffffff 0%,#efefef 100%); 
+	background: linear-gradient(top, #ffffff 0%,#efefef 100%); 
+  }
+
+.etliste_light-theme a:hover {
+	text-decoration: none;
+	background: #FCFCFC; 
+  }
+
+.etliste_light-theme .etliste_current {
+	background: #666;
+	color: #FFF;
+	border-color: #444;
+	box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+	cursor: default; 
+  }
+  
+ 
+ /**
+	===========
+	DATE PICKER 
+	===========
+	
+	Evangelische Termine benutzt clientseitig JQueryUI. Der nachfolgende CSS-Code gehört zu JQueryUI und ist hier integriert, um den Output von Evangelische Termine (den Datepicker) zu formatieren.
+	Bei bedarf kann weiterer CSS-Code aus der Datei https://evangelische-termine.de/bundles/vket/css/jquery-ui.min.css hier integriert und abgeändert werden.
+**/
+
+.ui-datepicker .ui-datepicker-buttonpane button {box-shadow:none}
+.ui-widget.ui-widget-content{
+    border: 1px solid #b4de9a;
+    box-shadow: 1px 5px 5px #b4de9a;
+}
+.ui-widget-content{border:1px solid #b4de9a;background:#ffffff;color:#000000;}
+.ui-widget-content a{color:#000000;}
+.ui-widget-header{border:1px solid #b4de9a;background:#b4de9a;color:#ffffff;font-weight:bold;}
+.ui-widget-header a{color:#ffffff;}
+.ui-state-default,.ui-widget-content .ui-state-default{border:1px solid #b4de9a;background:#E6FFD7;font-weight:normal;color:#000000;}
+.ui-state-highlight,.ui-widget-content .ui-state-highlight{border:1px solid #b4de9a;background:#b4de9a;color:#ffffff;}
