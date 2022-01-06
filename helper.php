@@ -198,7 +198,7 @@ class modETListeHelper
 			}			
 			$placeIMP = filter_var($_GET['placeIMP'], FILTER_SANITIZE_STRING);
 			if ($placeIMP != ''){
-				$place = placeIMP;
+				$place = $placeIMP;
 				//$reset = true;
 			}	
 			$peopleIMP = filter_var($_GET['peopleIMP'], FILTER_SANITIZE_STRING);
