@@ -10,7 +10,7 @@ Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit d
 7. Wählen Sie auf der rechten Seite des Reiters 'Modul' eine Position auf Ihrer Joomla-Seite aus an der das Modul erscheinen soll, z.B. eine Sidebar. Beachten Sie dazu unbedingt auch Punkt 8! 
 8. Wählen Sie unter dem Reiter 'Menüzuweisung' aus, auf welchen Seiten das Modul tatsächlich angezeigt werden soll. Falls Sie die Standardeinstellung ('Auf keinen Seiten') beibehalten, wird das Modul nicht auf ihrer Joomla-Seite angezeigt.
 9. Passen Sie unter dem Reiter 'Layout' das Aussehen des Moduls Ihren Bedürfnissen an.
-10. Wählen Sie unter dem Reiter 'Erweitert' eine Zeichenkodierung aus. Die Zeichenkodierung des Moduls muss der Zeichenkodierung Ihrer Joomla-Seit entsprechen (i.d.R. 'UTF-8').
+10. Wählen Sie unter dem Reiter 'Erweitert' eine Zeichenkodierung aus. Die Zeichenkodierung des Moduls muss der Zeichenkodierung Ihrer Joomla-Seite entsprechen (i.d.R. 'UTF-8').
 11. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
 12. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
@@ -67,7 +67,6 @@ Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Re
 	background:rgba(240,255,230,1);
 }
 
-
 .etliste_content_row.odd {
   background:rgba(240,255,230,1);
 }
@@ -116,7 +115,6 @@ Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Re
 #footer a {
 	color:#999;
   }
-
 
 .etliste_light-theme a, .etliste_light-theme span {
 	color:#666;
@@ -180,3 +178,20 @@ Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Re
     color:#ffffff;
 }
 ```
+### Manche Zeichen und Buchstaben (z.B. Umlaute) werden falsch dargestellt
+Der Fehler tritt auf, wenn die Zeichenkodierung des Moduls nicht mit der Zeichenkodierung Ihrer Joomla-Seite übereinstimmt.
+Sehen Sie statt den Umlauten ä, ö, ü die Zeichen Ã¤, Ã¶, Ã¼, müssen Sie in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung latin-1 auswählen.
+Sehen Sie statt den Umlauten ä, ö, ü dieses Zeichen �, müssen Sie  in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung utf-8 auswählen.
+Bitte beachten Sie: Evangelische Termine unterstützt standardmäßig nur latin-1 und utf-8. Falls Ihre Joomla-Seite eine andere Zeichenkodierung hat, wird das Modul ohne Anpassungen des Codes immer falsche Zeichen anzeigen. 
+### Was sind URL-Parameter und wozu braucht man Sie?
+#### Das sind URL-Parameter 
+Mit URL-Parametern können Sie Einstellungen an den Code Ihrer Joomla-Seite übergeben. Diese Einstellungen werden einfach an die URL angehängt, mit der Sie Ihre Seite aufrufen. Angenommen Ihre Seite ist 'www.meineseite.de', dann können Sie mit '&meinparameter=eineeinstellung' Ihrer Seite die Einstellung 'meinparameter=eineeinstellung' übergeben, indem Sie die URL 'www.meineseite.de&meinparameter=eineeinstellung' aufrufen. Je nach Einstellung wird dann z.B. etwas anderes auf Ihrer Seite angezeigt oder ein bestimmter Code aufgerufen.
+#### Darum sind URL-Parameter für das Modul 'Evangelische Termine Liste' hilfreich
+Angenommen, Sie erstellen unter Joomla einen neuen Beitrag, den Sie 'Gottesdienstplan' nennen. Sie fügen in den Beitrag das Modul 'Evangelische Termine Liste' ein. Damit auch wirklich nur Gottesdienste angezeigt werden, öffnen Sie die Einstellungen des Moduls. Unter dem Reiter 'Modul' geben Sie im Feld 'Kategorie' den Wert '1' für Gottesdienste ein. Wenn Sie jetzt auf Ihrer Joomla-Seite den Beitrag 'Gottesdienstplan' öffnen, sehen Sie eine Liste aller anstehenden Gottesdienste.
+Angenommen, Sie wollen nun auch einen Beitrag 'Gruppen und Kreise' erstellen mit allen wichtigen Informationen zu Ihren Gruppen und natürlich den nächsten Terminen. Sie fügen wieder das Modul 'Evangelische Termine Liste' ein. Wenn Sie jetzt aber wieder die Einstellungen des Moduls öffnen und einfach im Feld Kategorie den Wert '2' für Gruppen und Kreise eingeben, werden auch in Ihrem Beitrag 'Gottesdienstplan' die Termine der Gruppen und Kreise angezeigt und nicht länger die Termine der Gottesdienste.
+Dieses Problem können wir lösen, indem wir die Einstellung, welche Kategorie angezeigt werdem soll, per URL-Parameter festlegen.
+#### Ein einfaches Beispiel für URL-Parameter
+Sie legen einen Beitrag 'Gottesdienstplan' an. Zunächst geben Sie wichtige Informationen, z.B. zum Ablauf oder Corona-Regeln, ein. Dann fügen Sie das Modul 'Evangelische Termine Liste' in Ihren Beitrag ein, damit der Beitrag auch den Gottesdienstplan enthält. Sie speichern den Beitrag und erstellen anschließend unter 'Menüs' -> 'Hauptmenü' -> 'Neuer Menüeintrag' einen neuen Menüeintrag. Als 'Menütyp' wählen Sie 'Systemlinks' -> 'URL' aus. In das Feld 'Link' geben Sie die relative oder absolute URL zu Ihrem Beitrag 'Gotesdienstplan' ein (z.B.: '?option=com_content&view=article&id=18&catid=1' oder 'https:\\www.meineseite.de\index.php?option=com_content&view=article&id=18&catid=1'). Nun hängen Sie an die URL noch den URL-Parameter an, der die Kategorie 'Gottesdienst' festlegt: '&eventtypeIMP=1'. Damit dieser Parameter auch wirklich den Wert überschreibt, den wir in den Einstellungen des Moduls eingegeben haben, hängen wir noch den URL-Parameter '&override=true' an. Ihre URL lautet nun '?option=com_content&view=article&id=18&catid=1&eventtypeIMP=1&override=true'. Wenn Sie nun auf Ihrer Joomla-Seite über das Menü den Beitrag Gottesdienstplan' aufrufen, werden dort alle Gottesdiensttermine angezeigt.
+Dasselbe machen wir nun mit einem weiteren Beitrag. Sie legen den Beitrag 'Gruppen und Kreise' an. Zunächst geben Sie wichtige Informationen ein, z.B. zu Ansprechpartnern, den Gruppenräumen oder den Corona-Regeln. Dann fügen Sie das Modul 'Evangelische Termine Liste' in Ihren Beitrag ein. Sie speichern den Beitrag und erstellen anschließend unter 'Menüs' -> 'Hauptmenü' -> 'Neuer Menüeintrag' einen neuen Menüeintrag. Als 'Menütyp' wählen Sie 'Systemlinks' -> 'URL' aus. In das Feld 'Link' geben Sie die relative oder absolute URL zu Ihrem Beitrag 'Gruppen und Kreise' ein (z.B.: '?option=com_content&view=article&id=19&catid=2' oder 'https:\\www.meineseite.de\index.php?option=com_content&view=article&id=19&catid=2'). Nun hängen Sie an die URL noch den URL-Parameter an, der die Kategorie 'Gruppen und Kreise' festlegt: '&eventtypeIMP=2'. Damit dieser Parameter auch wirklich den Wert überschreibt, den wir in den Einstellungen des Moduls eingegeben haben, hängen wir noch den URL-Parameter '&override=true' an. Ihre URL lautet nun '?option=com_content&view=article&id=19&catid=2&eventtypeIMP=2&override=true'. Wenn Sie nun auf Ihrer Joomla-Seite über das Menü den Beitrag 'Gruppen und Kreise' aufrufen, werden dort alle Termine Ihrer Gruppen und Kreise angezeigt.
+Das können Sie mit beliebig vielen Beiträgen wiederholen. Falls Sie außer dem Modul keinen Text zum Beitrag hinzufügen, können Sie sgar jedes Mal denselben Beitrag verwenden.
+Die URL-Parameter, die Ihnen zur Verfügung stehen, sind bei der Einstellung 'URL-Parameter' unter dem Reiter 'Erweitert' dokumentiert.
