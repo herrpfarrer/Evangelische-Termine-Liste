@@ -867,7 +867,7 @@ class modETListeHelper
 			$pageContent=$body->ownerDocument->saveHTML($body);
 			$pageContent = str_replace('<body>', '', $pageContent);
 			$pageContent = str_replace('</body>', '', $pageContent);
-			$pageContent = '<!--Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.-->' . $pageContent . '<!-- Ende Modul Evangelische Termine Liste -->'
+			$pageContent = '<!--Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.-->' . $pageContent . '<!-- Ende Modul Evangelische Termine Liste -->';
 			$liste = $setcloak . $pageContent;
 			
 			
