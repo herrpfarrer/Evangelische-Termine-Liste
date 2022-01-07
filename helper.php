@@ -3,7 +3,7 @@
  * Helper class für Modul Evangelische Termine Teaser
  */
  
-// Benötigt, um CSS-Dateien und JavaScript aus ET-Output in den Header der Joomlaseite zu schreiben
+// Benötigt, um CSS-Dateien und JavaScript aus ET-Output in den Header der Joomla-Seite zu schreiben
 use Joomla\CMS\Factory;
  
 class modETListeHelper
@@ -867,6 +867,7 @@ class modETListeHelper
 			$pageContent=$body->ownerDocument->saveHTML($body);
 			$pageContent = str_replace('<body>', '', $pageContent);
 			$pageContent = str_replace('</body>', '', $pageContent);
+			$pageContent = '<!--Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.-->' . $pageContent . '<!-- Ende Modul Evangelische Termine Liste -->'
 			$liste = $setcloak . $pageContent;
 			
 			
