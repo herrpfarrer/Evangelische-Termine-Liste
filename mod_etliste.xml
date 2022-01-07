@@ -3,8 +3,8 @@
     
 	<name>Evangelische Termine Liste</name>
     <author>Daniel Städtler</author>
-    <version>1.0.0</version>
-    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.</description>
+    <version>1.0.1</version>
+    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.1.0.1).</description>
 	
     <files>
         <filename>mod_etliste.xml</filename>
