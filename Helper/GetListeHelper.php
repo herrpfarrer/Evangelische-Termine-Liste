@@ -683,7 +683,11 @@ class GetListeHelper
 					// Ergänze Überschrift
 					$headingsList = $dom->getElementsByTagName($headlinetag);
 					foreach ($headingsList  as $headingnode){
-						$headingnode->nodeValue = 'Außer Gottesdienste';
+						$headline = $headingnode->nodeValue;
+						if($headline!=''){
+							$headline = ' '.$headline;
+						}
+						$headingnode->nodeValue = 'Außer Gottesdienste'.$headline;
 					}					
 				}
 				
