@@ -2,13 +2,43 @@
 /**
  * Helper class für Modul Evangelische Termine Teaser
  */
- 
+namespace EvangelischeTermine\Module\EvangelischeTermineListe\Site\Helper;
+
+defined('_JEXEC') or die;
+
 // Benötigt, um CSS-Dateien und JavaScript aus ET-Output in den Header der Joomla-Seite zu schreiben
 use Joomla\CMS\Factory;
  
 class GetListeHelper
 {
-  
+
+	private static function setSessionVar($key, $sess, $default = NULL) {
+		if( $_REQUEST[$key] != ''){		// leere Strings werden ignoriert
+			$sess->{$key} = $_REQUEST[$key];
+			if($key != 'pageID'){
+				$sess->pageID = 1;
+			}
+		} else {
+			if ($key == 'date'){       // leere Datumstrings dürfen nicht ignoriert werden, weil sich sonst ein einmal eingegebenes Datum nicht löschen lässt
+				$sess->{$key} = '';
+			}
+		}
+		if($sess->{$key} == ''){
+			$sess->{$key} = $default;
+		}
+	}
+	
+	private static function resetSessionVars($sess, $defaults){
+		$sess->vid = $defaults['vid'];
+		$sess->eventtype = $defaults['eventtype'];
+		$sess->highlight = $defaults['highlight'];
+		$sess->people = $defaults['people'];
+		$sess->pageID = 1;
+		$sess->et_q = '';
+		$sess->itemsPerPage = $defaults['itemsPerPage'];
+		$sess->date = '';
+	}
+
     public static function getListe($params)
     {
 		// =========================
@@ -374,60 +404,31 @@ class GetListeHelper
 		
 		session_start();
 		if(!isset($_SESSION['session'])) {
-			$session = new stdClass;    
+			$session = new \stdClass;    
 			$_SESSION['session'] = $session;
 		} else {
 			$session = $_SESSION['session'];
 		}  
-		
-		
-		function setSessionVar($key, $sess, $default = NULL) {
-			if( $_REQUEST[$key] != ''){		// leere Strings werden ignoriert
-				$sess->{$key} = $_REQUEST[$key];
-				if($key != 'pageID'){
-					$sess->pageID = 1;
-				}
-			} else {
-				if ($key == 'date'){       // leere Datumstrings dürfen nicht ignoriert werden, weil sich sonst ein einmal eingegebenes Datum nicht löschen lässt
-					$sess->{$key} = '';
-				}
-			}
-			if($sess->{$key} == ''){
-				$sess->{$key} = $default;
-			}
-		}
-		
-		
-		function resetSessionVars($sess, $defaults){
-			$sess->vid = $defaults['vid'];
-			$sess->eventtype = $defaults['eventtype'];
-			$sess->highlight = $defaults['highlight'];
-			$sess->people = $defaults['people'];
-			$sess->pageID = 1;
-			$sess->et_q = '';
-			$sess->itemsPerPage = $defaults['itemsPerPage'];
-			$sess->date = '';
-		}
  
  
 		// Reset Session, falls Seite mit URL-Parametern aufgerufen wurde
 		if ( $reset == 'true' ){
-			resetSessionVars($session, $ET_defaults);
+			self::resetSessionVars($session, $ET_defaults);
 		}
 
 		 
 		if($_REQUEST['reset'] == '1'){
-			resetSessionVars($session, $ET_defaults);
+			self::resetSessionVars($session, $ET_defaults);
 		} else {
-			setSessionVar('vid', $session ,$ET_defaults['vid']);
-			setSessionVar('region', $session ,$ET_defaults['region']);
-			setSessionVar('aid', $session ,$ET_defaults['aid']);
-			setSessionVar('date', $session ,'');
-			setSessionVar('eventtype', $session , $ET_defaults['eventtype']);
-			setSessionVar('highlight', $session , $ET_defaults['highlight']);
-			setSessionVar('people', $session ,$ET_defaults['people']);
-			setSessionVar('itemsPerPage', $session ,$ET_defaults['itemsPerPage']);
-			setSessionVar('pageID', $session ,'1');
+			self::setSessionVar('vid', $session ,$ET_defaults['vid']);
+			self::setSessionVar('region', $session ,$ET_defaults['region']);
+			self::setSessionVar('aid', $session ,$ET_defaults['aid']);
+			self::setSessionVar('date', $session ,'');
+			self::setSessionVar('eventtype', $session , $ET_defaults['eventtype']);
+			self::setSessionVar('highlight', $session , $ET_defaults['highlight']);
+			self::setSessionVar('people', $session ,$ET_defaults['people']);
+			self::setSessionVar('itemsPerPage', $session ,$ET_defaults['itemsPerPage']);
+			self::setSessionVar('pageID', $session ,'1');
 			 
 			if($_REQUEST['et_q'] != ''){
 				$session->et_q = $_REQUEST['et_q'];
@@ -509,7 +510,7 @@ class GetListeHelper
 
 		if (isset($pageContent)){
 
-			$dom = new DOMDocument();
+			$dom = new \DOMDocument();
 			$dom->loadHTML('<?xml encoding="' . $encodingXML . '" ?>' . $pageContent);
 
 			// A. ALLGEMEINE FORMATIERUNGEN
