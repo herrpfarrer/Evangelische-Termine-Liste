@@ -3,15 +3,12 @@
  * Modul Evangelische Termine Liste
  * 
  */
-
 // No direct access
 defined('_JEXEC') or die;
 
-// Include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
-$liste = modETListeHelper::getListe($params);
+use Joomla\CMS\Helper\ModuleHelper;
+use EvangelischeTermine\Module\EvangelischeTermineListe\Site\Helper\GetListeHelper;
 
-// Modulklassen-Suffix
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$liste = GetListeHelper::getListe($params);
 
-require JModuleHelper::getLayoutPath('mod_etliste');
+require ModuleHelper::getLayoutPath('mod_etliste', $params->get('layout', 'default'));
