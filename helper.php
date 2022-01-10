@@ -352,6 +352,8 @@ class modETListeHelper
 		// ==========================================================================
 		// K O M M U N I K A TI O N   M I T   E V A N G E L I S C H E   T E R M I N E
 		// ==========================================================================
+		// Der nachfolgende Code basiert auf Code von EVangelische Termine, der dort im Admin-Bereich veröffentlicht wurde (https://evangelische-termine.de/Admin/ausgabe).
+		// Auf Anfrage hat der Verantwortliche Miklós Geyer mitgeteilt, dass der Code keiner Lizenz unterliegt, also gemeinfrei ist, und beliebig verändert und genutzt werden darf.
 		
 				 
 		// Vorbelegungen beim ersten Aufruf
