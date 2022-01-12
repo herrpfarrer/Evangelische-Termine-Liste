@@ -1,6 +1,11 @@
 <?php
 /**
- * Helper class für Modul Evangelische Termine Teaser
+ * @package    Evangelische Termine Liste
+ *
+ * @author     Daniel Städtler - herr_pfarrer@posteo.de
+ * @copyright  Copyright 2022 Daniel Städtler. – All rights reserved.
+ * @license    GNU General Public License version 3
+ * @link       https://github.com/herrpfarrer/Evangelische-Termine-Liste
  */
 namespace EvangelischeTermine\Module\EvangelischeTermineListe\Site\Helper;
 
