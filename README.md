@@ -3,7 +3,7 @@ Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit d
 ## Installation
 1. Laden Sie die aktuelle Version des Moduls herunter.
 Falls Sie Joomla 3.x verwenden, brauchen Sie Version 1.x des Moduls 'Evangelische Termine Liste'. Die aktuelle Version für Ihr 3.x- System finden Sie hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)
-Falls Sie Joomla 4.x verwenden, können Sie Version 2.x des Moduls 'Evangelische Termine Liste' verwenden. Die aktuelle Version für Ihr 4.x-System finden Sie hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0/mod_etliste.zip)
+Falls Sie Joomla 4.x verwenden, können Sie Version 2.x des Moduls 'Evangelische Termine Liste' verwenden. Die aktuelle Version für Ihr 4.x-System finden Sie hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie auf 'Erweiterungen' -> 'Verwalten' -> 'Installieren' -> 'Paketdatei hochladen'.
