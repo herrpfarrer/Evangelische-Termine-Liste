@@ -186,7 +186,7 @@ Der Fehler tritt auf, wenn die Zeichenkodierung des Moduls nicht mit der Zeichen
 Sehen Sie statt den Umlauten ä, ö, ü die Zeichen Ã¤, Ã¶, Ã¼, müssen Sie in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung latin-1 auswählen.
 Sehen Sie statt den Umlauten ä, ö, ü dieses Zeichen �, müssen Sie  in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung utf-8 auswählen.
 Bitte beachten Sie: Evangelische Termine unterstützt standardmäßig nur latin-1 und utf-8. Falls Ihre Joomla-Seite eine andere Zeichenkodierung hat, wird das Modul ohne Anpassungen des Codes immer falsche Zeichen anzeigen. 
-### Was sind URL-Parameter und wozu braucht man Sie?
+### Was sind URL-Parameter und wozu braucht man sie?
 #### Das sind URL-Parameter 
 Mit URL-Parametern können Sie Einstellungen an den Code Ihrer Joomla-Seite übergeben. Diese Einstellungen werden einfach an die URL angehängt, mit der Sie Ihre Seite aufrufen. Angenommen Ihre Seite ist `www.meineseite.de`, dann können Sie mit `&meinparameter=eineeinstellung` Ihrer Seite die Einstellung `meinparameter=eineeinstellung` übergeben, indem Sie die URL `www.meineseite.de&meinparameter=eineeinstellung` aufrufen. Je nach Einstellung wird dann z.B. etwas anderes auf Ihrer Seite angezeigt oder ein bestimmter Code aufgerufen.
 #### Darum sind URL-Parameter für das Modul 'Evangelische Termine Liste' hilfreich
