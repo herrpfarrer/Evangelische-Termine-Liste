@@ -421,21 +421,23 @@ class GetListeHelper
 		);
 		
 		
+
+
 		session_start();
 		if(!isset($_SESSION['session'])) {
 			$session = new \stdClass;    
 			$_SESSION['session'] = $session;
 		} else {
 			$session = $_SESSION['session'];
-		}  
+		} 
  
  
 		// Reset Session, falls Seite mit URL-Parametern aufgerufen wurde
 		if ( $reset == 'true' ){
 			self::resetSessionVars($session, $ET_defaults);
 		}
-
 		 
+		
 		if($_REQUEST['reset'] == '1'){
 			self::resetSessionVars($session, $ET_defaults);
 		} else {
@@ -605,7 +607,7 @@ class GetListeHelper
 			// B. ÜBERSICHTSSEITE/LISTE FORMATIEREN
 			// ====================================
 			
-			if ($input->get('etId', '', 'string')=='') {
+			if ($input->get('etID', '', 'string')=='') {
 			
 			
 				//  B1. Füge aktuellen Suchbegriff in Suchfeld ein
