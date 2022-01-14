@@ -46,11 +46,23 @@ class GetListeHelper
 
     public static function getListe($params)
     {
+
+		// =================================
+		// J O O M L A - F U N K T I O N E N
+		// =================================
+				
+		// JInput
+		// JInput ist eine Alternative zur superglobalen Variable $_GET
+		// Joomla 4 rät von $_GET dringend ab, wird also evtl. in zukünftigen Versionen nicht mehr unterstützt.
+		$input = Factory::getApplication()->input;
+
+
+
 		// =========================
 		// E I N S T E L L U N G E N
 		// =========================
 	
-	
+
 	
 		// A. MODUL-EINSTELLUNGEN
 		// ======================
@@ -200,49 +212,49 @@ class GetListeHelper
 			$urlparam='true';
 		}
 		if ($urlparam=='true'){
-			
-			$reset = filter_var($_GET['override'], FILTER_SANITIZE_STRING);
+
+			$reset = $input->get('override', '', 'string');
 			if ($reset==''){
 				$reset='false';
 			}			
 			
-			$veranstalterIDIMP = filter_var($_GET['vidIMP'], FILTER_SANITIZE_STRING);
+			$veranstalterIDIMP = $input->get('vidIMP', '', 'string');
 			if ($veranstalterIDIMP != ''){
 				$veranstalterID = $veranstalterIDIMP;
 			}		
-			$regionIMP = filter_var($_GET['regionIMP'], FILTER_SANITIZE_STRING);
+			$regionIMP = $input->get('regionIMP', '', 'string');
 			if ($regionIMP  != ''){
 				$region = $regionIMP;
 			}		
-			$itemsPerPageIMP = filter_var($_GET['itemsPerPageIMP'], FILTER_SANITIZE_STRING);
+			$itemsPerPageIMP = $input->get('itemsPerPageIMP', '', 'string');
 			if ($itemsPerPageIMP  != ''){
 				$itemsPerPage = $itemsPerPageIMP;
 			}
-			$highlightIMP = filter_var($_GET['highlightIMP'], FILTER_SANITIZE_STRING);
+			$highlightIMP = $input->get('highlightIMP', '', 'string');
 			if ($highlightIMP  != ''){
 				$highlight = $highlightIMP;
 			}
-			$eventtypeIMP = filter_var($_GET['eventtypeIMP'], FILTER_SANITIZE_STRING);
+			$eventtypeIMP = $input->get('eventtypeIMP', '', 'string');
 			if ($eventtypeIMP != ''){
 				$eventtype = $eventtypeIMP;
 			}			
-			$placeIMP = filter_var($_GET['placeIMP'], FILTER_SANITIZE_STRING);
+			$placeIMP = $input->get('placeIMP', '', 'string');
 			if ($placeIMP != ''){
 				$place = $placeIMP;
 			}	
-			$peopleIMP = filter_var($_GET['peopleIMP'], FILTER_SANITIZE_STRING);
+			$peopleIMP = $input->get('peopleIMP', '', 'string');
 			if ($peopleIMP != ''){
 				$people = $peopleIMP;
 			}
-			$personIMP = filter_var($_GET['personIMP'], FILTER_SANITIZE_STRING);
+			$personIMP = $input->get('personIMP', '', 'string');
 			if ($personIMP != ''){
 				$person = $personIMP;
 			}
-			$ipmIMP = filter_var($_GET['ipmIMP'], FILTER_SANITIZE_STRING);
+			$ipmIMP = $input->get('ipmIMP', '', 'string');
 			if ($ipmIMP != ''){
 				$ipm = $ipmIMP;
 			}
-			$chaIMP = filter_var($_GET['chaIMP'], FILTER_SANITIZE_STRING);
+			$chaIMP = $input->get('chaIMP', '', 'string');
 			if ($chaIMP != ''){
 				$cha = $chaIMP;
 			}
@@ -389,7 +401,8 @@ class GetListeHelper
 		// ==========================================================================
 		// Der nachfolgende Code basiert auf Code von EVangelische Termine, der dort im Admin-Bereich veröffentlicht wurde (https://evangelische-termine.de/Admin/ausgabe).
 		// Auf Anfrage hat der Verantwortliche Miklós Geyer mitgeteilt, dass der Code keiner Lizenz unterliegt, also gemeinfrei ist, und beliebig verändert und genutzt werden darf.
-				 
+
+
 		// Vorbelegungen beim ersten Aufruf
 		$ET_defaults = array(
 			'vid' =>  $veranstalterID,
@@ -478,8 +491,9 @@ class GetListeHelper
 			}
 		}
 		$filename = 'veranstaltungen-php';
-		if ($_GET['etID'] != '') {
-			$queryString .= '&ID='. $_GET['etID'];
+		$etID = $input->get('etID', '', 'string');
+		if ($etID != '') {
+			$queryString .= '&ID='. $etID;
 			$filename = 'detail-php';
 		}
 		$host = 'evangelische-termine.de';
@@ -591,7 +605,7 @@ class GetListeHelper
 			// B. ÜBERSICHTSSEITE/LISTE FORMATIEREN
 			// ====================================
 			
-			if ($_GET['etID'] == '') {
+			if ($input->get('etId', '', 'string')=='') {
 			
 			
 				//  B1. Füge aktuellen Suchbegriff in Suchfeld ein
