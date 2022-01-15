@@ -419,17 +419,14 @@ class GetListeHelper
 			'until' => 'yes',
 			'css' => ''
 		);
-		
-		
 
-
-		session_start();
-		if(!isset($_SESSION['session'])) {
-			$session = new \stdClass;    
-			$_SESSION['session'] = $session;
-		} else {
-			$session = $_SESSION['session'];
-		} 
+		  
+		$sessionhandler = \JFactory::getSession();
+		$session = $sessionhandler->get('etliste');
+		if(is_null($session)) {
+			$session = new \stdClass;  
+			$sessionhandler->set('etliste',$session);
+		}
  
  
 		// Reset Session, falls Seite mit URL-Parametern aufgerufen wurde
@@ -437,7 +434,7 @@ class GetListeHelper
 			self::resetSessionVars($session, $ET_defaults);
 		}
 		 
-		
+
 		if($_REQUEST['reset'] == '1'){
 			self::resetSessionVars($session, $ET_defaults);
 		} else {
@@ -937,7 +934,7 @@ class GetListeHelper
 		}
 
         //Debug-Information:
-		// $liste .= "Akt. Kategorie: " . $session->eventtype . " Default-Kategorie" . $ET_defaults['eventtype'];
+		// $liste .= '';
 		
         return $liste;
     }
