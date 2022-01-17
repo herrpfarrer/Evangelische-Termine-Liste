@@ -1,7 +1,7 @@
-# Evangelische Termine Liste
-Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.
+# Evangelische Termine Liste für Joomla 3.x
+Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'. Falls Sie Joomka 4.x verwenden, klicken Sie bitte hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste) 
 ## Installation
-1. Laden Sie die aktuelle Version des Moduls herunter (https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.2/mod_etliste.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie auf 'Erweiterungen' -> 'Verwalten' -> 'Installieren' -> 'Paketdatei hochladen'.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld 'Dateien zum Hochladen hier hereinziehen und ablegen'.
@@ -11,8 +11,9 @@ Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit d
 8. Wählen Sie unter dem Reiter 'Menüzuweisung' aus, auf welchen Seiten das Modul tatsächlich angezeigt werden soll. Falls Sie die Standardeinstellung ('Auf keinen Seiten') beibehalten, wird das Modul nicht auf ihrer Joomla-Seite angezeigt.
 9. Passen Sie unter dem Reiter 'Layout' das Aussehen des Moduls Ihren Bedürfnissen an.
 10. Wählen Sie unter dem Reiter 'Erweitert' eine Zeichenkodierung aus. Die Zeichenkodierung des Moduls muss der Zeichenkodierung Ihrer Joomla-Seite entsprechen (i.d.R. 'UTF-8').
-11. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
-12. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
+11. Wählen Sie unter dem Reiter 'Erweitert' ein Übertragungsprotokoll aus. Das Übertragungsprotokoll des Moduls muss dem Übertragungsprotokoll Ihrer Joomla-Seite entsprechen (i.d.R. 'https').
+12. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
+13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
 ## Probleme, Fragen, Tipps
 ### Ich habe das Modul installiert, es wird aber auf meiner Joomla-Seite nicht angezeigt.
@@ -183,7 +184,7 @@ Der Fehler tritt auf, wenn die Zeichenkodierung des Moduls nicht mit der Zeichen
 Sehen Sie statt den Umlauten ä, ö, ü die Zeichen Ã¤, Ã¶, Ã¼, müssen Sie in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung latin-1 auswählen.
 Sehen Sie statt den Umlauten ä, ö, ü dieses Zeichen �, müssen Sie  in den Einstellungen unter dem Reiter 'Erweitert' die Zeichenkodierung utf-8 auswählen.
 Bitte beachten Sie: Evangelische Termine unterstützt standardmäßig nur latin-1 und utf-8. Falls Ihre Joomla-Seite eine andere Zeichenkodierung hat, wird das Modul ohne Anpassungen des Codes immer falsche Zeichen anzeigen. 
-### Was sind URL-Parameter und wozu braucht man Sie?
+### Was sind URL-Parameter und wozu braucht man sie?
 #### Das sind URL-Parameter 
 Mit URL-Parametern können Sie Einstellungen an den Code Ihrer Joomla-Seite übergeben. Diese Einstellungen werden einfach an die URL angehängt, mit der Sie Ihre Seite aufrufen. Angenommen Ihre Seite ist `www.meineseite.de`, dann können Sie mit `&meinparameter=eineeinstellung` Ihrer Seite die Einstellung `meinparameter=eineeinstellung` übergeben, indem Sie die URL `www.meineseite.de&meinparameter=eineeinstellung` aufrufen. Je nach Einstellung wird dann z.B. etwas anderes auf Ihrer Seite angezeigt oder ein bestimmter Code aufgerufen.
 #### Darum sind URL-Parameter für das Modul 'Evangelische Termine Liste' hilfreich
