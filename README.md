@@ -1,21 +1,21 @@
-# Evangelische Termine Liste
+# Evangelische Termine Liste für Joomla 4.x
 Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.
+Falls Sie Joomla 3.x verwenden, klicken Sie bitte hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/tree/ETListe-Joomla-3.x)
 ## Installation
-1. Laden Sie die aktuelle Version des Moduls herunter.
-Falls Sie Joomla 3.x verwenden, brauchen Sie Version 1.x des Moduls 'Evangelische Termine Liste'. Die aktuelle Version für Ihr 3.x- System finden Sie hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)
-Falls Sie Joomla 4.x verwenden, können Sie Version 2.x des Moduls 'Evangelische Termine Liste' verwenden. Die aktuelle Version für Ihr 4.x-System finden Sie hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
-3. Klicken Sie auf 'Erweiterungen' -> 'Verwalten' -> 'Installieren' -> 'Paketdatei hochladen'.
+3. Klicken Sie im Menü auf 'System'. Es öffnet sich die Seite 'System: Dashboard'. Wählen Sie dort unter dem Breich 'Installieren' mit einem Klick 'Erweiterungen' aus. Es öffnet sich eine neue Seite. Klicken Sie dort auf den Reiter 'Paketdatei hochladen'.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld 'Dateien zum Hochladen hier hereinziehen und ablegen'.
-5. Klicken Sie auf 'Erweiterungen' -> 'Module' -> 'Evangelische Termine Liste'.
+5. Klicken Sie im Menü auf 'Inhalt' -> 'Site Module'. Es erscheint eine Liste aller installierten Module. Suchen Sie das Modul 'Evangelische Termine Liste' und klicken Sie darauf, um zu den Einstellungen des Moduls zu gelangen.
 6. Geben Sie im Hauptbereich des Reiters 'Modul' Ihre Veranstalternummer von Evangelische Termine ein und wählen Sie aus, welche Termine angezeigt werden sollen.
 7. Wählen Sie auf der rechten Seite des Reiters 'Modul' eine Position auf Ihrer Joomla-Seite aus, an der das Modul erscheinen soll, z.B. eine Sidebar. Beachten Sie dazu unbedingt auch Punkt 8! 
-8. Wählen Sie unter dem Reiter 'Menüzuweisung' aus, auf welchen Seiten das Modul tatsächlich angezeigt werden soll. Falls Sie die Standardeinstellung ('Auf keinen Seiten') beibehalten, wird das Modul nicht auf ihrer Joomla-Seite angezeigt.
+8. Wählen Sie unter dem Reiter 'Menüzuweisung' aus, auf welchen Seiten das Modul tatsächlich angezeigt werden soll. Falls Sie die Standardeinstellung ('Auf keiner Seite') beibehalten, wird das Modul nicht auf ihrer Joomla-Seite angezeigt.
 9. Passen Sie unter dem Reiter 'Layout' das Aussehen des Moduls Ihren Bedürfnissen an.
 10. Wählen Sie unter dem Reiter 'Erweitert' eine Zeichenkodierung aus. Die Zeichenkodierung des Moduls muss der Zeichenkodierung Ihrer Joomla-Seite entsprechen (i.d.R. 'UTF-8').
-11. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
-12. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
+11. Wählen Sie unter dem Reiter 'Erweitert' ein Übertragungsprotokoll aus. Das Übertragungsprotokoll des Moduls muss dem Übertragungsprotokoll Ihrer Joomla-Seite entsprechen (i.d.R. 'https').
+12. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
+13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
 ## Probleme, Fragen, Tipps
 ### Ich habe das Modul installiert, es wird aber auf meiner Joomla-Seite nicht angezeigt.
