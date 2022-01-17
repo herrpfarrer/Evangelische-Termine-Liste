@@ -29,6 +29,13 @@ class modETListeHelper
 		} elseif ($encoding == 'latin-1'){
 			$encodingXML = 'ISO 8859-1';
 		}
+
+		// Protokoll
+		// Passen Sie das Datenübertragungsprotokoll des Moduls dem Ihrer Webseite an. Unterstützt werden 'http' und 'https'."
+		$protocol = $params->get('protocol');
+		if($protocol == ''){
+			$protocol = 'https';
+		}
 		
 		// Font-Awesome
 		// Falls Sie Font-Awesome nicht installiert haben, geben Sie einen Pfad zur Datei 'font-awesome.css' oder 'font-awesome.min.css' auf einem anderen Server an (z.B. 'https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css').
@@ -478,7 +485,7 @@ class modETListeHelper
 			$filename = 'detail-php';
 		}
 		$host = 'evangelische-termine.de';
-		$url =  "https://$host/$filename?$queryString"; //http!
+		$url =  $protocol . "://$host/$filename?$queryString";
 		 
 		 
 		if(function_exists('curl_init')){
@@ -491,8 +498,8 @@ class modETListeHelper
 			$pageContent = curl_exec ($sobl);
 			$sobl_info = curl_getinfo ( $sobl);
 			if($sobl_info['http_code'] == '200'){
-				$pageContent = str_replace("/Upload/","https://$host/Upload/",$pageContent); //http!
-				$pageContent = str_replace("http://_HOST_/","https://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);	//http!
+				$pageContent = str_replace("/Upload/",$protocol."://$host/Upload/",$pageContent);
+				$pageContent = str_replace($protocol."://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
         
 			} else {
 				# Fehlermeldung:

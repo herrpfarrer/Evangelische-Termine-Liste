@@ -361,6 +361,17 @@
 					<option value="utf8">utf8</option>
 				</field>
 				<field
+					name="protocol"
+					type="list"
+					label="Protokoll"
+					description="Passen Sie das Datenübertragungsprotokoll des Moduls dem Ihrer Webseite an. Unterstützt werden 'http' und 'https'."
+					required="true"
+					>
+					<option value="">Bitte auswählen</option>
+					<option value="http">http</option>
+					<option value="https">https</option>
+				</field>
+				<field
 					name="bettercopyURL"
 					type="list"
 					label="Moderne Funktion 'In Zwischenablage kopieren'"
