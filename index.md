@@ -23,7 +23,7 @@ Evangelische Termine Liste ist kein Angebot von [Evangelische Termine](https://w
 
 ## Installation und Einrichtung
 ### unter Joomla 4.x
-1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download).
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#download).
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie im Menü auf 'System'. Es öffnet sich die Seite 'System: Dashboard'. Wählen Sie dort unter dem Bereich 'Installieren' mit einem Klick 'Erweiterungen' aus. Es öffnet sich eine neue Seite. Klicken Sie dort auf den Reiter 'Paketdatei hochladen'.
@@ -39,7 +39,7 @@ Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
 ### unter Joomla 3.x
-1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#download). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie auf 'Erweiterungen' -> 'Verwalten' -> 'Installieren' -> 'Paketdatei hochladen'.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld 'Dateien zum Hochladen hier hereinziehen und ablegen'.
