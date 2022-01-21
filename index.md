@@ -3,7 +3,7 @@
 > [**Evangelische Termine Liste für Joomla 4.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)  
 > [**Evangelische Termine Liste für Joomla 3.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)  
   
-#&nbsp;  
+# &nbsp;  
 + [###**Über das Modul Evangelische Termine Liste für Joomla**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-das-modul-evangelische-termine-liste-für-joomla)
 + [###**Über Evangelische Termine**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-evangelische-termine)
 + [###**Installation und Einrichtung**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#installation-und-einrichtung)
@@ -233,6 +233,8 @@ Sie legen einen Beitrag 'Gottesdienstplan' an. Zunächst geben Sie wichtige Info
 Dasselbe machen wir nun mit einem weiteren Beitrag. Sie legen den Beitrag 'Gruppen und Kreise' an. Zunächst geben Sie wichtige Informationen ein, z.B. zu Ansprechpartnern, den Gruppenräumen oder den Corona-Regeln. Dann fügen Sie das Modul 'Evangelische Termine Liste' in Ihren Beitrag ein. Sie speichern den Beitrag und erstellen anschließend unter 'Menüs' -> 'Hauptmenü' -> 'Neuer Menüeintrag' einen neuen Menüeintrag. Als 'Menütyp' wählen Sie 'Systemlinks' -> 'URL' aus. In das Feld 'Link' geben Sie die relative oder absolute URL zu Ihrem Beitrag 'Gruppen und Kreise' ein (z.B. `?option=com_content&view=article&id=19&catid=2` oder `https:\\www.meineseite.de\index.php?option=com_content&view=article&id=19&catid=2`). Nun hängen Sie an die URL noch den URL-Parameter an, der die Kategorie 'Gruppen und Kreise' festlegt: `&eventtypeIMP=2`. Damit dieser Parameter auch wirklich den Wert überschreibt, den wir in den Einstellungen des Moduls eingegeben haben, hängen wir noch den URL-Parameter `&override=true` an. Ihre URL lautet nun `?option=com_content&view=article&id=19&catid=2&eventtypeIMP=2&override=true`. Wenn Sie nun auf Ihrer Joomla-Seite über das Menü den Beitrag 'Gruppen und Kreise' aufrufen, werden dort alle Termine Ihrer Gruppen und Kreise angezeigt.
 Das können Sie mit beliebig vielen Beiträgen wiederholen. Falls Sie außer dem Modul keinen Text zum Beitrag hinzufügen, können Sie sogar jedes Mal denselben Beitrag verwenden.
 Die URL-Parameter, die Ihnen zur Verfügung stehen, sind bei der Einstellung 'URL-Parameter' unter dem Reiter 'Erweitert' dokumentiert.
+### Was ist beim Upgrade von Joomla 3.x auf Joomla 4.x zu beachten?
+Falls Sie das Modul Evangelische Termine Liste zu Ihrer Joomla-3.x-Installation hinzugefügt haben, können Sie bedenkenlos das Upgrade auf Joomla 4.x durchführen. Nach dem Upgrade wird Joomla Ihnen automatisch anzeigen, dass ein Update für Evangelische Termine Liste zur Verfügung steht. Wenn Sie das Update installieren, wird Evangelische Termine Liste auf die neueste mit Joomla 4.x kompatible Version aktualisiert.
 
 ## Support und Kontakt
 Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue erstellen. Den Verantwortlichen für das Repository können Sie per E-Mail (github_herrpfarrer@posteo.de) kontaktieren.
