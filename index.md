@@ -1,14 +1,14 @@
-# Download
-Evangelische Termine Liste steht für Joomla 3.x und Joomla 4.x zu Verfügung. Laden Sie hier die passende Version herunter:  
-[**Evangelische Termine Liste für Joomla 4.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)  
-[**Evangelische Termine Liste für Joomla 3.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)  
-
-> ## Übersicht
-> + [Über das Modul Evangelische Termine Liste für Joomla](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-das-modul-evangelische-termine-liste-für-joomla)
-> + [Über Evangelische Termine](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-evangelische-termine)
-> + [Installation und Einrichtung](https://herrpfarrer.github.io/Evangelische-Termine-Liste#installation-und-einrichtung)
-> + [Probleme, Fragen, Tipps](https://herrpfarrer.github.io/Evangelische-Termine-Liste#probleme-fragen-tipps)
-> + [Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Liste#support-und-kontakt)
+> # Download
+> Evangelische Termine Liste steht für Joomla 3.x und Joomla 4.x zu Verfügung. Laden Sie hier die passende Version herunter:  
+> [**Evangelische Termine Liste für Joomla 4.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)  
+> [**Evangelische Termine Liste für Joomla 3.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)  
+  
+#&nbsp;  
++ [###**Über das Modul Evangelische Termine Liste für Joomla**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-das-modul-evangelische-termine-liste-für-joomla)
++ [###**Über Evangelische Termine**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-evangelische-termine)
++ [###**Installation und Einrichtung**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#installation-und-einrichtung)
++ [###**Probleme, Fragen, Tipps**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#probleme-fragen-tipps)
++ [###**Support und Kontakt**](https://herrpfarrer.github.io/Evangelische-Termine-Liste#support-und-kontakt)
 
 ## Über das Modul Evangelische Termine Liste für Joomla
 Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend an jeder beliebigen Stelle Ihrer Internetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer.
