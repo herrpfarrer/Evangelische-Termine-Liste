@@ -2,7 +2,6 @@
 Evangelische Termine Liste steht für Joomla 3.x und Joomla 4.x zu Verfügung. Laden Sie hier die passende Version herunter:  
 [**Evangelische Termine Liste für Joomla 4.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)  
 [**Evangelische Termine Liste für Joomla 3.x**](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)  
-&nbsp;  
 
 > ## Übersicht
 > + [Über das Modul Evangelische Termine Liste für Joomla](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-das-modul-evangelische-termine-liste-für-joomla)
