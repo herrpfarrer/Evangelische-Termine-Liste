@@ -28,6 +28,7 @@ Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 11. Wählen Sie unter dem Reiter 'Erweitert' ein Übertragungsprotokoll aus. Das Übertragungsprotokoll des Moduls muss dem Übertragungsprotokoll Ihrer Joomla-Seite entsprechen (i.d.R. 'https').
 12. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
 13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
+
 ### unter Joomla 3.x
 1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
