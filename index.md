@@ -241,6 +241,7 @@ Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue
 
 <details>
 <summary>Impressum</summary>
+	
 ## Impressum
 ### Angaben gemäß § 5 TMG
 Daniel Städtler
