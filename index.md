@@ -2,17 +2,16 @@
 
 Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.
 
+## Download
+[Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
+[Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)
+
 ## Übersicht
-+ [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download)
 + [Über das Modul Evangelische Termine Liste für Joomla](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-das-modul-evangelische-termine-liste-für-joomla)
 + [Über Evangelische Termine](https://herrpfarrer.github.io/Evangelische-Termine-Liste#über-evangelische-termine)
 + [Installation und Einrichtung](https://herrpfarrer.github.io/Evangelische-Termine-Liste#installation-und-einrichtung)
 + [Probleme, Fragen, Tipps](https://herrpfarrer.github.io/Evangelische-Termine-Liste#probleme-fragen-tipps)
 + [Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Liste#support-und-kontakt)
-
-## Download
-[Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
-[Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)
 
 ## Über das Modul Evangelische Termine Liste für Joomla
 Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend und anschleißend an jeder beliebigen Stelle Ihrer Intrnetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer.
@@ -26,7 +25,7 @@ Evangelische Termine Liste ist kein Angebot von [Evangelische Termine](https://w
 
 ## Installation und Einrichtung
 ### unter Joomla 4.x
-1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download).
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie im Menü auf 'System'. Es öffnet sich die Seite 'System: Dashboard'. Wählen Sie dort unter dem Breich 'Installieren' mit einem Klick 'Erweiterungen' aus. Es öffnet sich eine neue Seite. Klicken Sie dort auf den Reiter 'Paketdatei hochladen'.
@@ -42,7 +41,7 @@ Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
 ### unter Joomla 3.x
-1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie auf 'Erweiterungen' -> 'Verwalten' -> 'Installieren' -> 'Paketdatei hochladen'.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld 'Dateien zum Hochladen hier hereinziehen und ablegen'.
