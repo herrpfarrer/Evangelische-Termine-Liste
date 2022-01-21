@@ -11,9 +11,9 @@ Evangelische Termine Liste steht für Joomla 3.x und Joomla 4.x zu Verfügung. L
 > + [Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Liste#support-und-kontakt)
 
 ## Über das Modul Evangelische Termine Liste für Joomla
-Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend und anschleißend an jeder beliebigen Stelle Ihrer Intrnetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer.
-Das Modul bitete Ihnen viele Einstellungen, mit denen Sie ganze gnau festlegen können, welche Termine auf Ihrer Internetseite angezeigt werden sollen, z.B. nur Gottesdienste oder bestimmte Kategorien von Veranstaltungen, nur Veranstaltungen für Jugendliche oder andere Personengruppen, nur Veranstaltungen an bestimmten Orten usw.
-Sie können das Modul Evangelische Termine Liste für Joomla auch dann verwenden, wenn Sie selbst keinen Zugang zu [www.evangelische-termine.de](https://www.evangelische-termine.de) haben. Sie bauchen lediglich die Veranstaltungs-ID des bzw. die Veranstaltungs-IDs der Gemeinde(n), dereren Termine Sie anzeigen möchten.
+Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend an jeder beliebigen Stelle Ihrer Internetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer.
+Das Modul bietet Ihnen viele Einstellungen, mit denen Sie ganze genau festlegen können, welche Termine auf Ihrer Internetseite angezeigt werden sollen, z.B. nur Gottesdienste oder bestimmte Kategorien von Veranstaltungen, nur Veranstaltungen für Jugendliche oder andere Personengruppen, nur Veranstaltungen an bestimmten Orten usw.
+Sie können das Modul Evangelische Termine Liste für Joomla auch dann verwenden, wenn Sie selbst keinen Zugang zu [www.evangelische-termine.de](https://www.evangelische-termine.de) haben. Sie bauchen lediglich die Veranstaltungs-ID des bzw. die Veranstaltungs-IDs der Gemeinde(n), deren Termine Sie anzeigen möchten.
 
 Evangelische Termine Liste ist kein Angebot von [Evangelische Termine](https://www.evangelische-termine.de) oder [Vernetzte Kirche](https://www.vernetzte-kirche.de) und wird auch nicht davon unterstützt.
 
@@ -25,7 +25,7 @@ Evangelische Termine Liste ist kein Angebot von [Evangelische Termine](https://w
 1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download).
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
-3. Klicken Sie im Menü auf 'System'. Es öffnet sich die Seite 'System: Dashboard'. Wählen Sie dort unter dem Breich 'Installieren' mit einem Klick 'Erweiterungen' aus. Es öffnet sich eine neue Seite. Klicken Sie dort auf den Reiter 'Paketdatei hochladen'.
+3. Klicken Sie im Menü auf 'System'. Es öffnet sich die Seite 'System: Dashboard'. Wählen Sie dort unter dem Bereich 'Installieren' mit einem Klick 'Erweiterungen' aus. Es öffnet sich eine neue Seite. Klicken Sie dort auf den Reiter 'Paketdatei hochladen'.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld 'Dateien zum Hochladen hier hereinziehen und ablegen'.
 5. Klicken Sie im Menü auf 'Inhalt' -> 'Site Module'. Es erscheint eine Liste aller installierten Module. Suchen Sie das Modul 'Evangelische Termine Liste' und klicken Sie darauf, um zu den Einstellungen des Moduls zu gelangen.
 6. Geben Sie im Hauptbereich des Reiters 'Modul' Ihre Veranstalternummer von Evangelische Termine ein und wählen Sie aus, welche Termine angezeigt werden sollen.
