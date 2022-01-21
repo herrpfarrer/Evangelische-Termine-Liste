@@ -240,7 +240,8 @@ Falls Sie das Modul Evangelische Termine Liste zu Ihrer Joomla-3.x-Installation 
 Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue erstellen. Den Verantwortlichen für das Repository können Sie per E-Mail (github_herrpfarrer@posteo.de) kontaktieren.
 
 <details>
-<summary>## Impressum</summary>
+<summary>Impressum</summary>
+## Impressum
 ### Angaben gemäß § 5 TMG
 Daniel Städtler
 Marktplatz 18
