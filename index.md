@@ -2,17 +2,29 @@
 
 Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.
 
-## Über das Modul Evangelische Termine Liste für Joomla
+## Übersicht
+[Download](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-download)
+[Über das Modul Evangelische Termine Liste für Joomla](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-ueber-modul)
+[Über Evangelische Termine](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-ueber-et)
+[Installation und Einrichtung](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-installation)
+[Probleme, Fragen, Tipps](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-fragen)
+[Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Liste#anchor-support)
+
+## [Download](#anchor-download)
+[Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
+[Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/1.0.3/mod_etliste.zip)
+
+## [Über das Modul Evangelische Termine Liste für Joomla](#anchor-ueber-modul)
 Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend und anschleißend an jeder beliebigen Stelle Ihrer Intrnetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer.
 Das Modul bitete Ihnen viele Einstellungen, mit denen Sie ganze gnau festlegen können, welche Termine auf Ihrer Internetseite angezeigt werden sollen, z.B. nur Gottesdienste oder bestimmte Kategorien von Veranstaltungen, nur Veranstaltungen für Jugendliche oder andere Personengruppen, nur Veranstaltungen an bestimmten Orten usw.
 Sie können das Modul Evangelische Termine Liste für Joomla auch dann verwenden, wenn Sie selbst keinen Zugang zu [www.evangelische-termine.de](https://www.evangelische-termine.de) haben. Sie bauchen lediglich die Veranstaltungs-ID des bzw. die Veranstaltungs-IDs der Gemeinde(n), dereren Termine Sie anzeigen möchten.
 
 Evangelische Termine Liste ist kein Angebot von [Evangelische Termine](https://www.evangelische-termine.de) oder [Vernetzte Kirche](https://www.vernetzte-kirche.de) und wird auch nicht davon unterstützt.
 
-## Über Evangelische Termine
+## [Über Evangelische Termine](#anchor-ueber-et)
 [Evangelische Termine](https://www.evangelische-termine.de) ist ein Angebot von [Vernetzte Kirche](https://www.vernetzte-kirche.de), der Internet-Agentur der Evangelisch-Lutherischen Kirche in Bayern. Evangelische Termine ist die Datenbank für Gottesdienste und Veranstaltungen in der Evang.-Luth. Kirche in Bayern. Gemeinden, kirchliche Einrichtungen inklusive Diakonischer Werke können unter [www.evangelische-termine.de](https://www.evangelische-termine.de) ihre Termine eingeben. Veranstaltungsinformationen müssen nur einmal eingegeben werden und können dann zentral verwaltet werden. Sie können auf Websites ausgegeben werden und in verschiedenen Formaten exportiert werden. Räume und sonstige Ressourcen sowie Anmeldungen zu Veranstaltungen können verwaltet werden.
 
-## Installation und Einrichtung
+## [Installation und Einrichtung](#anchor-installation)
 ### unter Joomla 4.x
 1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Evangelische Termine Liste für Joomla 4.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/releases/download/2.0.1/mod_etliste.zip)
 Sie brauchen die heruntergeladene Datei nicht zu entpacken.
@@ -44,7 +56,7 @@ Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 12. Falls Sie auf Ihrer Joomla-Seite nicht Font-Awesome installiert haben, geben Sie unter dem Reiter 'Erweitert' eine URL zu einer Font-Awesome-Installation an (z.B. https://www.evangelische-termine.de/bundles/vket/css/font-awesome.min.css).
 13. Falls Sie das Modul mehrfach mit unterschiedlichen Terminen auf Ihrer Joomla-Seite anzeigen möchten, wählen Sie unter dem Reiter 'Erweitert' 'Ja, URL-Parameter zulassen' und machen Sie sich mit der Beschreibung der Einstellung 'URL-Parameter?' vertraut.
 
-## Probleme, Fragen, Tipps
+## [Probleme, Fragen, Tipps](#anchor-fragen)
 ### Ich habe das Modul installiert, es wird aber auf meiner Joomla-Seite nicht angezeigt.
 Stellen Sie sicher, dass Sie in den Einstellungen des Moduls unter dem Reiter 'Menüzuweisung' das Modul auch der entsprechenden Unterseite oder allen Seiten Ihrer Joomla-Seite zugewiesen haben.
 ### Wie kann ich das Modul in einen Beitrag einbetten?
@@ -226,5 +238,5 @@ Dasselbe machen wir nun mit einem weiteren Beitrag. Sie legen den Beitrag 'Grupp
 Das können Sie mit beliebig vielen Beiträgen wiederholen. Falls Sie außer dem Modul keinen Text zum Beitrag hinzufügen, können Sie sogar jedes Mal denselben Beitrag verwenden.
 Die URL-Parameter, die Ihnen zur Verfügung stehen, sind bei der Einstellung 'URL-Parameter' unter dem Reiter 'Erweitert' dokumentiert.
 
-## Support und Kontakt
+## [Support und Kontakt](#anchor-support)
 Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue erstellen. Den Verantwortlichen für das Repository können Sie per E-Mail (github_herrpfarrer@posteo.de) kontaktieren.
