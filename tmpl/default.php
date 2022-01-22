@@ -2,7 +2,7 @@
 /**
  * @package    Evangelische Termine Liste
  *
- * @author     Daniel Städtler - herr_pfarrer@posteo.de
+ * @author     Daniel Städtler - github_herrpfarrer@posteo.de
  * @copyright  Copyright 2022 Daniel Städtler. – All rights reserved.
  * @license    GNU General Public License version 3
  * @link       https://github.com/herrpfarrer/Evangelische-Termine-Liste

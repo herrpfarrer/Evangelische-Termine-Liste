@@ -3,12 +3,12 @@
     
 	<name>Evangelische Termine Liste</name>
     <author>Daniel Städtler</author>
-	<authorEmail>herr_pfarrer@posteo.de</authorEmail>
-	<authorUrl>https://github.com/herrpfarrer/Evangelische-Termine-Liste</authorUrl>
+	<authorEmail>github_herrpfarrer@posteo.de</authorEmail>
+	<authorUrl>https://herrpfarrer.github.io/Evangelische-Termine-Liste/</authorUrl>
     <copyright>Copyright 2022 Daniel Städtler. – All rights reserved.</copyright>
     <license>GNU General Public License version 3</license>
-	<version>2.0.1</version>
-    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.1).</description>
+	<version>2.0.2</version>
+    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.2).</description>
     <namespace>EvangelischeTermine\Module\EvangelischeTermineListe</namespace>
 	
     <files>
