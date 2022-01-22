@@ -10,3 +10,4 @@ Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit d
 [Probleme, Fragen, Tipps](https://herrpfarrer.github.io/Evangelische-Termine-Liste#probleme-fragen-tipps)  
 [Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Liste#support-und-kontakt)  
 [Impressum](https://herrpfarrer.github.io/Evangelische-Termine-Liste#impressum)  
+[Datenschutz](https://herrpfarrer.github.io/Evangelische-Termine-Liste#datenschutz)  
