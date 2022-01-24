@@ -63,13 +63,13 @@ a.etliste_link:hover{}
 .etliste_filter_block_right div {
 	padding-left:5px;
 	padding-right:5px;
+	padding-bottom: 5px;
 	white-space:nowrap;
 	background:rgba(240,255,230,1);
   }
 
 .etliste_filter_row_left:first-of-type{
 	padding-top:10px;
-	padding-bottom: 5px;
 }
 
 .etliste_filter_row_right:first-of-type{
