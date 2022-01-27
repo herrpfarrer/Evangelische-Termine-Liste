@@ -8,6 +8,8 @@
  * @link       https://github.com/herrpfarrer/Evangelische-Termine-Liste
  */
  
+defined('_JEXEC') or die;
+
 // Benötigt, um CSS-Dateien und JavaScript aus ET-Output in den Header der Joomla-Seite zu schreiben
 use Joomla\CMS\Factory;
  
