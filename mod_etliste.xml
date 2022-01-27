@@ -428,7 +428,7 @@
     </config>
 
 	<updateservers>
-		<server type="extension" priority="2" name="Evangelische Termine Liste GitHub Repository">https://raw.githubusercontent.com/herrpfarrer/Evangelische-Termine-Liste/main/etlisteupdateserver.xml</server>
+		<server type="extension" priority="2" name="Evangelische Termine Liste GitHub Repository">https://raw.githubusercontent.com/herrpfarrer/Evangelische-Termine-Liste/ETListe-Joomla-4.x/etlisteupdateserver.xml</server>
 	</updateservers>
 
 </extension>
