@@ -1,5 +1,5 @@
 # Evangelische Termine Liste für Joomla 4.x
-Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste'.
+Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem kostenlosen und freien Modul 'Evangelische Termine Liste'.
 Falls Sie Joomla 3.x verwenden, klicken Sie bitte hier: [Evangelische Termine Liste für Joomla 3.x](https://github.com/herrpfarrer/Evangelische-Termine-Liste/tree/ETListe-Joomla-3.x)
   
 ---
