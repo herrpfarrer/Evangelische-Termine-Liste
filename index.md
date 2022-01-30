@@ -16,7 +16,7 @@
 Evangelische Termine Liste ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Liste mit wenigen Klicks installieren und anschließend an jeder beliebigen Stelle Ihrer Internetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer. Das Modul zeigt dann an dieser Stelle Ihre nächsten Termine an.  
 ### So könnte das Modul auf Ihrer Joomla-Seite aussehen:  
 [![Frontend](assets/img/ETListe Frontend.png)](assets/img/ETListe Frontend.png)  
-Anders als [Evangelische Termine Teaser](https://github.com/herrpfarrer/Evangelische-Termine-Teaser) gibt Evangelische Termine Liste dem Besucher Ihrer Seite verschiedene Möglichkeiten, selbst nach bestimmten Terminen zu suchen und die Suchauswahl einzugrenzen, u.a.:
+Anders als [Evangelische Termine Teaser](https://herrpfarrer.github.io/Evangelische-Termine-Teaser/) gibt Evangelische Termine Liste dem Besucher Ihrer Seite verschiedene Möglichkeiten, selbst nach bestimmten Terminen zu suchen und die Suchauswahl einzugrenzen, u.a.:
 * Auswahlfeld Kategorien: Legt fest, welche Kategorien angezeigt werden, z.B. Gottesdienste, Gruppen und Kreise, Konzerte usw.
 * Auswahlfeld Zielgruppen: Legt fest, für welche Zielgruppen Veranstaltungen angezeigt werden, z.B. Jugendliche, Senioren usw.
 * Suchfeld: Bietet die Möglichkeit, nach beliebigen Suchbegriffen zu sucghen, z.B. »Abendmahl«, »Frauenkreis«, »Jubelkonfirmation«
