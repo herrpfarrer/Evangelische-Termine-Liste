@@ -697,24 +697,26 @@ class GetListeHelper
 				//  B3. Ergänze Kategorie 'Außer Gottesdienste'
 				// = = = = = = = = = = = = = = = = = = = = = = =
 				$eventtypenode = $dom->getElementById('eventtype');
-				$aussergdnode = $dom->createElement('option', 'Außer Gottesdienste');
-				$aussergdnode->setAttribute('value','-1');
-				$eventtypenode->insertBefore($aussergdnode, $eventtypenode->firstChild->nextSibling);
-				if ($session->eventtype == '-1') {
-					// Mache 'Außer Gotesdienste' zum ausgewählten Element
-					foreach ($eventtypenode->childNodes as $node){
-						$node->removeAttribute('selected');
-					}
-					$aussergdnode->setAttribute('selected','selected');
-					// Ergänze Überschrift
-					$headingsList = $dom->getElementsByTagName($headlinetag);
-					foreach ($headingsList  as $headingnode){
-						$headline = $headingnode->nodeValue;
-						if($headline!=''){
-							$headline = ' '.$headline;
+				if (isset($eventtypenode)){
+					$aussergdnode = $dom->createElement('option', 'Außer Gottesdienste');
+					$aussergdnode->setAttribute('value','-1');
+					$eventtypenode->insertBefore($aussergdnode, $eventtypenode->firstChild->nextSibling);
+					if ($session->eventtype == '-1') {
+						// Mache 'Außer Gotesdienste' zum ausgewählten Element
+						foreach ($eventtypenode->childNodes as $node){
+							$node->removeAttribute('selected');
 						}
-						$headingnode->nodeValue = 'Außer Gottesdienste'.$headline;
-					}					
+						$aussergdnode->setAttribute('selected','selected');
+						// Ergänze Überschrift
+						$headingsList = $dom->getElementsByTagName($headlinetag);
+						foreach ($headingsList  as $headingnode){
+							$headline = $headingnode->nodeValue;
+							if($headline!=''){
+								$headline = ' '.$headline;
+							}
+							$headingnode->nodeValue = 'Außer Gottesdienste'.$headline;
+						}					
+					}
 				}
 				
 				
