@@ -65,7 +65,7 @@ class modETListeHelper
 		// Für die Dekanatsausgabe geben Sie als Veranstalter-ID 'all' ein.
 		$veranstalterID = $params->get('veranstalterid');
 		if($veranstalterID == ''){
-			$veranstalterID = '2220';
+			$veranstalterID = '3';
 		}
 
 		// Dekanats-Nummer
