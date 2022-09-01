@@ -7,8 +7,8 @@
 	<authorUrl>https://herrpfarrer.github.io/Evangelische-Termine-Liste/</authorUrl>
     <copyright>Copyright 2022 Daniel Städtler. – All rights reserved.</copyright>
     <license>GNU General Public License version 3</license>
-	<version>2.0.3</version>
-    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.3).</description>
+	<version>2.0.4</version>
+    <description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.4).</description>
     <namespace>EvangelischeTermine\Module\EvangelischeTermineListe</namespace>
 	
     <files>
@@ -180,6 +180,17 @@
 					class="text"
 					label="&lt;h3&gt;Einstellungen der Übersichtsseite/Liste&lt;/h3&gt;"
 				/>
+				<field
+					name="showheadline"
+					type="radio"
+					label="Zeige Überschrift?"
+					description="Soll die Überschrift angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
 				<field
 					name="showhighlight"
 					type="radio"

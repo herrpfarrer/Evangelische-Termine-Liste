@@ -105,7 +105,7 @@ class GetListeHelper
 		// Für die Dekanatsausgabe geben Sie als Veranstalter-ID 'all' ein.
 		$veranstalterID = $params->get('veranstalterid');
 		if($veranstalterID == ''){
-			$veranstalterID = '2220';
+			$veranstalterID = '3';
 		}
 
 		// Dekanats-Nummer
@@ -290,6 +290,13 @@ class GetListeHelper
 		//  C2. Layouteinstellungen für Übersichtsseite/Liste
 		// = = = = = = = = = = = = = = = = = = = = = = = = = = 
 		
+		// Zeige Überschrift
+		// Soll die Überschrift angezeigt werden?
+		$showheadline = $params->get('showheadline');
+		if ($showheadline == '' ){
+			$showheadline = 'true';
+		}
+
 		// Zeige Highlights?
 		// Soll die Eingabe- bzw. Filtermethode 'Highlights' angezeigt werden?
 		$showhighlight = $params->get('showhighlight');
@@ -621,8 +628,16 @@ class GetListeHelper
 					$inputfield->setAttribute('value', $_REQUEST['et_q']);
 				}
 
+				//  B2. Blende Überschift aus, falls gewünscht
+				// = = = = = = = = = = = = = = = = = = = = = = = = =
+				if ($showheadline == 'false'){
+					$div_etliste_headline = $dom->getElementById('etliste_headline');
+					if (isset($div_etliste_headline)){
+						$div_etliste_headline->parentNode->removeChild($div_etliste_headline);
+					}
+				}
 								
-				//  B2. Zeige nur die ausgewählten Eingabe- und Filtermethoden an
+				//  B3. Zeige nur die ausgewählten Eingabe- und Filtermethoden an
 				// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 				
 				// Falls gar keine Filtermethode angezeigt werden soll, lösche das übergeordnete div aller Filter ('etliste_filter_container')
@@ -694,7 +709,7 @@ class GetListeHelper
 				}
 
 
-				//  B3. Ergänze Kategorie 'Außer Gottesdienste'
+				//  B4. Ergänze Kategorie 'Außer Gottesdienste'
 				// = = = = = = = = = = = = = = = = = = = = = = =
 				$eventtypenode = $dom->getElementById('eventtype');
 				if (isset($eventtypenode)){
