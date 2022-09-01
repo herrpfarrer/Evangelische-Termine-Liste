@@ -366,7 +366,7 @@ class modETListeHelper
 		// ==========================================================================
 		// K O M M U N I K A TI O N   M I T   E V A N G E L I S C H E   T E R M I N E
 		// ==========================================================================
-		// Der nachfolgende Code basiert auf Code von EVangelische Termine, der dort im Admin-Bereich veröffentlicht wurde (https://evangelische-termine.de/Admin/ausgabe).
+		// Der nachfolgende Code basiert auf Code von Evangelische Termine, der dort im Admin-Bereich veröffentlicht wurde (https://evangelische-termine.de/Admin/ausgabe).
 		// Auf Anfrage hat der Verantwortliche Miklós Geyer mitgeteilt, dass der Code keiner Lizenz unterliegt, also gemeinfrei ist, und beliebig verändert und genutzt werden darf.
 		
 				 
@@ -562,15 +562,16 @@ class modETListeHelper
 
 			// Ersetze Überschriften-Tag
 			$headingsList = $dom->getElementsByTagName('h1');
-			for ($indexHeadings = $headingsList->length - 1; $indexHeadings >= 0; $indexHeadings --) {
-				$oldHeading = $headingsList->item($indexHeadings);
-				$newHeading = $dom->createElement($headlinetag, $oldHeading->nodeValue);
-				foreach ($oldHeading->attributes as $attr) {
-					$newHeading->setAttribute($attr->nodeName,$attr->nodeValue);
-				}
-				$oldHeading->parentNode->replaceChild($newHeading, $oldHeading);
-			}			
-			
+			if (isset($headingsList)){
+				for ($indexHeadings = $headingsList->length - 1; $indexHeadings >= 0; $indexHeadings --) {
+					$oldHeading = $headingsList->item($indexHeadings);
+					$newHeading = $dom->createElement($headlinetag, $oldHeading->nodeValue);
+					foreach ($oldHeading->attributes as $attr) {
+						$newHeading->setAttribute($attr->nodeName,$attr->nodeValue);
+					}
+					$oldHeading->parentNode->replaceChild($newHeading, $oldHeading);
+				}			
+			}
 			
 			// Ermittle alle mitgelieferten CSS-Files, um sie später an den Header der Joomla-Seite zu übergeben
 			$linkList = $dom->getElementsByTagName('link');
@@ -662,7 +663,7 @@ class modETListeHelper
 							}
 						}
 					} else {
-					// Ansonsten lösche nur die einzelnen divs (zur umständlichen Methode siehe zwei Kommenatre weiter oben)
+					// Ansonsten lösche nur die einzelnen divs (zur umständlichen Methode siehe zwei Kommentare weiter oben)
 						$i_filters = 0;
 						foreach ($divList as $div) {
 							if ($div->getAttribute('class')=='etliste_filter_row_right'){
@@ -686,24 +687,26 @@ class modETListeHelper
 				//  B3. Ergänze Kategorie 'Außer Gottesdienste'
 				// = = = = = = = = = = = = = = = = = = = = = = =
 				$eventtypenode = $dom->getElementById('eventtype');
-				$aussergdnode = $dom->createElement('option', 'Außer Gottesdienste');
-				$aussergdnode->setAttribute('value','-1');
-				$eventtypenode->insertBefore($aussergdnode, $eventtypenode->firstChild->nextSibling);
-				if ($session->eventtype == '-1') {
-					// Mache 'Außer Gotesdienste' zum ausgewählten Element
-					foreach ($eventtypenode->childNodes as $node){
-						$node->removeAttribute('selected');
-					}
-					$aussergdnode->setAttribute('selected','selected');
-					// Ergänze Überschrift
-					$headingsList = $dom->getElementsByTagName($headlinetag);
-					foreach ($headingsList  as $headingnode){
-						$headline = $headingnode->nodeValue;
-						if($headline!=''){
-							$headline = ' '.$headline;
+				if (isset($eventtypenode)){
+					$aussergdnode = $dom->createElement('option', 'Außer Gottesdienste');
+					$aussergdnode->setAttribute('value','-1');
+					$eventtypenode->insertBefore($aussergdnode, $eventtypenode->firstChild->nextSibling);
+					if ($session->eventtype == '-1') {
+						// Mache 'Außer Gotesdienste' zum ausgewählten Element
+						foreach ($eventtypenode->childNodes as $node){
+							$node->removeAttribute('selected');
 						}
-						$headingnode->nodeValue = 'Außer Gottesdienste'.$headline;
-					}					
+						$aussergdnode->setAttribute('selected','selected');
+						// Ergänze Überschrift
+						$headingsList = $dom->getElementsByTagName($headlinetag);
+						foreach ($headingsList  as $headingnode){
+							$headline = $headingnode->nodeValue;
+							if($headline!=''){
+								$headline = ' '.$headline;
+							}
+							$headingnode->nodeValue = 'Außer Gottesdienste'.$headline;
+						}					
+					}
 				}
 				
 				
