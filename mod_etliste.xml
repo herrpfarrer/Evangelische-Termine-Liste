@@ -181,6 +181,17 @@
 					label="&lt;h3&gt;Einstellungen der Übersichtsseite/Liste&lt;/h3&gt;"
 				/>
 				<field
+					name="showheadline"
+					type="radio"
+					label="Zeige Überschrift?"
+					description="Soll die Überschrift angezeigt werden?"
+					class="btn-group btn-group-yesno"
+					required="true"
+					>
+					<option value="true">Ja, anzeigen</option>
+					<option value="false">Nein, ausblenden</option>
+				</field>
+				<field
 					name="showhighlight"
 					type="radio"
 					label="Zeige Highlights?"

@@ -234,7 +234,7 @@ class modETListeHelper
 		
 		//  C1. Allgemeine Layouteinstellungen
 		// = = = = = = = = = = = = = = = = = = =
-		
+
 		// HTML-Tag der Überschrift
 		// Welches HTML-Tag soll die Überschrift erhalten? Achtung: Sie formatieren die Überschrift innerhalb des Moduls (z.B. 'Veranstaltungen' oder 'Gottesdienst am Altjahresabend'), nicht die Überschrift des Moduls (siehe dazu im Registertab 'Erweitert' die Einstellung 'Header-Tag').
 		$headlinetag = $params->get('headlinetag');
@@ -250,6 +250,13 @@ class modETListeHelper
 		//  C2. Layouteinstellungen für Übersichtsseite/Liste
 		// = = = = = = = = = = = = = = = = = = = = = = = = = = 
 		
+		// Zeige Überschrift
+		// Soll die Überschrift angezeigt werden?
+		$showheadline = $params->get('showheadline');
+		if ($showheadline == '' ){
+			$showheadline = 'true';
+		}
+
 		// Zeige Highlights?
 		// Soll die Eingabe- bzw. Filtermethode 'Highlights' angezeigt werden?
 		$showhighlight = $params->get('showhighlight');
@@ -558,7 +565,6 @@ class modETListeHelper
 					$element->setAttribute('id', $idname);
 				}
 			}
-			
 
 			// Ersetze Überschriften-Tag
 			$headingsList = $dom->getElementsByTagName('h1');
@@ -611,8 +617,15 @@ class modETListeHelper
 					$inputfield->setAttribute('value', $_REQUEST['et_q']);
 				}
 
+				//  B2. Blende Überschift aus, falls gewünscht
+				if ($showheadline == 'false'){
+					$div_etliste_headline = $dom->getElementById('etliste_headline');
+					if (isset($div_etliste_headline)){
+						$div_etliste_headline->parentNode->removeChild($div_etliste_headline);
+					}
+				}
 								
-				//  B2. Zeige nur die ausgewählten Eingabe- und Filtermethoden an
+				//  B3. Zeige nur die ausgewählten Eingabe- und Filtermethoden an
 				// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 				
 				// Falls gar keine Filtermethode angezeigt werden soll, lösche das übergeordnete div aller Filter ('etliste_filter_container')
@@ -684,7 +697,7 @@ class modETListeHelper
 				}
 
 
-				//  B3. Ergänze Kategorie 'Außer Gottesdienste'
+				//  B4. Ergänze Kategorie 'Außer Gottesdienste'
 				// = = = = = = = = = = = = = = = = = = = = = = =
 				$eventtypenode = $dom->getElementById('eventtype');
 				if (isset($eventtypenode)){
