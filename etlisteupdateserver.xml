@@ -189,7 +189,7 @@
         <section>Updates</section>
         <targetplatform name="joomla" version="4" />
     </update>
-		<update>
+	<update>
 		<name>Evangelische Termine Liste</name>
 		<description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.3).</description>
 		<element>mod_etliste</element>
@@ -208,8 +208,7 @@
         <section>Updates</section>
         <targetplatform name="joomla" version="4" />
     </update>
-    </update>
-		<update>
+	<update>
 		<name>Evangelische Termine Liste</name>
 		<description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.4).</description>
 		<element>mod_etliste</element>
@@ -228,8 +227,7 @@
         <section>Updates</section>
         <targetplatform name="joomla" version="4" />
     </update>
-    </update>
-		<update>
+	<update>
 		<name>Evangelische Termine Liste</name>
 		<description>Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Liste' (v.2.0.5).</description>
 		<element>mod_etliste</element>
