@@ -621,11 +621,42 @@ class GetListeHelper
 			if ($input->get('etID', '', 'string')=='') {
 			
 			
-				//  B1. Füge aktuellen Suchbegriff in Suchfeld ein
-				// = = = = = = = = = = = = = = = = = = = = = = = = =
+				//  B1. Füge aktuellen Suchbegriff in Suchfeld und vor Auflistung der Suchergebnisse ein
+				// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 				if ($_REQUEST['et_q'] != '' && $_REQUEST['reset'] != '1') {
 					$inputfield = $dom->getElementById('et_q');
 					$inputfield->setAttribute('value', $_REQUEST['et_q']);
+				
+					// Ermitle, ob es Suchergebnisse gibt
+					// (Sind vorhanden, falls mindestens ein <div> mit class 'etliste_content_row' existiert)
+					$searchresults = false;
+					$divList = $dom->getElementsByTagName('div');
+					foreach ($divList as $div) {
+						$class = $div->getAttribute('class');
+						if (substr($class,0,strlen('etliste_content_row'))=='etliste_content_row'){
+							$searchresults = true;
+							break;
+						}
+					}
+
+					// Füge neues <div> mit Suchbegriff vor Auflistung der Suchergebnisse hinzu
+					if ($searchresults == false){
+						$searchresultstring = 'Keine Suchergebnisse für \'' . $_REQUEST['et_q'] . '\'.';
+					} else {
+						$searchresultstring = 'Suchergebnisse für \'' . $_REQUEST['et_q'] . '\':';
+					}
+
+					$searchresultdiv = $dom->createElement('div', $searchresultstring);
+					$searchresultdiv->setAttribute('id','etliste_searchresultmessage');
+
+					$contentdiv = $dom->getElementById('etliste_content_container');
+					if (isset($contentdiv)){
+						if ($searchresults == false){
+							$contentdiv->appendChild($searchresultdiv);
+						} else {
+							$contentdiv->insertBefore($searchresultdiv,$contentdiv->childNodes->item(0));
+						}
+					}			
 				}
 
 				//  B2. Blende Überschift aus, falls gewünscht
