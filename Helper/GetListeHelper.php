@@ -525,6 +525,9 @@ class GetListeHelper
 			if($sobl_info['http_code'] == '200'){
 				$pageContent = str_replace("/Upload/", $protocol . "://$host/Upload/",$pageContent);
 				$pageContent = str_replace($protocol . "://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
+
+				// Dieser Hack ist notwendig, da Evangelische Termine bei Pagination immer http verwendet, auch wenn man https abfragt.
+				$pageContent = str_replace("http://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
         
 			} else {
 				# Fehlermeldung:
