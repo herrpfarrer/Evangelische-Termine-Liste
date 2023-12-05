@@ -528,14 +528,22 @@ class GetListeHelper
 
 				// Dieser Hack ist notwendig, da Evangelische Termine bei Pagination immer http verwendet, auch wenn man https abfragt.
 				$pageContent = str_replace("http://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
+				
+				if($pageContent="" || strlen($pageContent)<=100){
+					$error = 'true';
+				}	else {
+					$error = 'false';
+				}				
         
 			} else {
 				# Fehlermeldung:
-				$liste = '<div>Der Veranstaltungskalender ist derzeit nicht verfügbar.</div>';
+				$liste = '<div>Der Veranstaltungskalender ist derzeit nicht verfügbar. Fehlercode: '.$sobl_info['http_code'].'</div>';
+				$error = 'true';
 			}
 		} else {
 			# Fehlermeldung:
-			$liste = '<div>Das benötigte PHP-Modul curl ist nicht installiert.</div>';   
+			$liste = '<div>Das benötigte PHP-Modul curl ist nicht installiert.</div>';
+			$error = 'true';  
 		}
 
 
@@ -543,8 +551,10 @@ class GetListeHelper
 		// ======================================================================================
 		// O U T P U T   V O N    E V A N G E L I S C H E   T E R M I N E   F O R M A T I E R E N
 		// ======================================================================================
+	
 
-		if (isset($pageContent)){
+
+		if (isset($pageContent) && $error == 'false'){
 
 			$dom = new \DOMDocument();
 			$dom->loadHTML('<?xml encoding="' . $encodingXML . '" ?>' . $pageContent);
@@ -946,7 +956,9 @@ class GetListeHelper
 			// Evangelische Termine gibt ein komlettes HTML-File, inkl. <html>-, <head>- und <body>-Tag aus.
 			// Für das Modul ET-Liste wird nur der Inhalt des <body>-Elements benötigt
 			$body = $dom->getElementsByTagName('body')->item(0);
-			$pageContent=$body->ownerDocument->saveHTML($body);
+			if (isset($body)){
+				$pageContent=$body->ownerDocument->saveHTML($body);
+			}
 			$pageContent = str_replace('<body>', '', $pageContent);
 			$pageContent = str_replace('</body>', '', $pageContent);
 			$pageContent = '<!--Integrieren Sie Ihre Termine bei Evangelische Termine in Ihre Joomla-Seite mit dem Modul Evangelische Termine Liste.-->' . $pageContent . '<!-- Ende Modul Evangelische Termine Liste -->';
@@ -991,8 +1003,9 @@ class GetListeHelper
 			
 		}
 
+
         //Debug-Information:
-		// $liste .= '';
+		$liste .= $pageContent;
 		
         return $liste;
     }
