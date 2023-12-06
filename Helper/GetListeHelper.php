@@ -509,7 +509,7 @@ class GetListeHelper
 			$queryString .= '&ID='. $etID;
 			$filename = 'detail-php';
 		}
-		$host = 'evangelische-termine.de';
+		$host = 'www.evangelische-termine.de';
 		$url =  $protocol . "://$host/$filename?$queryString";
 		 
 		 
@@ -522,6 +522,7 @@ class GetListeHelper
 			curl_setopt($sobl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
 			$pageContent = curl_exec ($sobl);
 			$sobl_info = curl_getinfo ( $sobl);
+
 			if($sobl_info['http_code'] == '200'){
 				$pageContent = str_replace("/Upload/", $protocol . "://$host/Upload/",$pageContent);
 				$pageContent = str_replace($protocol . "://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
@@ -529,23 +530,34 @@ class GetListeHelper
 				// Dieser Hack ist notwendig, da Evangelische Termine bei Pagination immer http verwendet, auch wenn man https abfragt.
 				$pageContent = str_replace("http://_HOST_/",$protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] ,$pageContent);
 				
-				if($pageContent="" || strlen($pageContent)<=100){
-					$error = 'true';
-				}	else {
-					$error = 'false';
-				}				
+				$error_occurred = false;
         
 			} else {
 				# Fehlermeldung:
-				$liste = '<div>Der Veranstaltungskalender ist derzeit nicht verfügbar. Fehlercode: '.$sobl_info['http_code'].'</div>';
-				$error = 'true';
+				$error_msg='<div>Der Veranstaltungskalender ist derzeit nicht verfügbar. Fehlercode: '.$sobl_info['http_code'].'.</div>';
+
+				/*
+				if($sobl_info['http_code'] == '301'){
+					$new_location=$sobl_info['Location'];
+					foreach($sobl_info as $key => $value) {
+						$error_msg.=$key.': '. $value.'</br>';
+					  }
+				}
+				*/
+				
+				$error_occurred = true;
 			}
+
 		} else {
 			# Fehlermeldung:
-			$liste = '<div>Das benötigte PHP-Modul curl ist nicht installiert.</div>';
-			$error = 'true';  
+			$error_msg.='<div>Das benötigte PHP-Modul curl ist nicht installiert.</div>';
+			$error_occurred = true;  
 		}
 
+
+		if ($error_occurred == true){
+			$liste = $error_msg;
+		}
 
 
 		// ======================================================================================
@@ -554,7 +566,7 @@ class GetListeHelper
 	
 
 
-		if (isset($pageContent) && $error == 'false'){
+		if (isset($pageContent) && $error_occurred == false){
 
 			$dom = new \DOMDocument();
 			$dom->loadHTML('<?xml encoding="' . $encodingXML . '" ?>' . $pageContent);
@@ -1003,9 +1015,6 @@ class GetListeHelper
 			
 		}
 
-
-        //Debug-Information:
-		$liste .= $pageContent;
 		
         return $liste;
     }
