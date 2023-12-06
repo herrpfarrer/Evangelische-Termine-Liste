@@ -498,7 +498,7 @@ class modETListeHelper
 			$queryString .= '&ID='. $_GET['etID'];
 			$filename = 'detail-php';
 		}
-		$host = 'evangelische-termine.de';
+		$host = 'www.evangelische-termine.de';
 		$url =  $protocol . "://$host/$filename?$queryString";
 		 
 		 
