@@ -254,18 +254,18 @@ Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue
 ### Impressum
 #### Angaben gemäß § 5 TMG
 Daniel Städtler  
-Dorfstr.3
-89281 Altenstadt
+Dorfstr.3  
+89281 Altenstadt  
 #### Kontakt
 Telefon: +49  (0)  1515 / 63 808 51  
-E-Mail: herr_pfarrer@posteo.de
+E-Mail: herr_pfarrer@posteo.de  
 ### Datenschutz
 #### Verantwortlich im Sinne der Datenschutzgesetzes:
 Daniel Städtler  
-Dorfstr.3
-89281 Altenstadt
-Telefon: +49  (0)  1515 / 63 808 51  
-E-Mail: herr_pfarrer@posteo.de
+Dorfstr.3  
+89281 Altenstadt  
+Telefon: +49  (0)  1515 / 63 808 51    
+E-Mail: herr_pfarrer@posteo.de  
 Im Folgenden »Besitzer des Repository« genannt.
 #### Welche Daten werden erfasst?
 Wenn Sie diese Website benutzen, werden vom Besitzer des Repository keinerlei personenbezogene Daten erhoben. Die Webseite nutzt keine Anlayse-Dienste, bindet keine externen Quellen ein und auch Cookies werden nicht genutzt. Personenbezogene Daten werden nur dann erfasst, wenn Sie diese von sich aus aktiv mitteilen, z.B. per E-Mail.
